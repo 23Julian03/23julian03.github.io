@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<!-- @version 1-0-0 -->
+
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="author" content="Julian Lamm"/>
+    
+    <link href="css/mainStyle.css" rel="stylesheet">
+    <link href="css/indexStyle.css" rel="stylesheet">
+    <link href="css/itemStyle.css" rel="stylesheet">
+    <link href="css/searchStyle.css" rel="stylesheet">
+
+    <link href="graphics/logo.png" rel="shortcut icon">
+    <title>CodeEagle - Übersicht</title>
+</head>
+
+<body>
+    <noscript> <!-- JavaScript is disabled - error page will be loaded -->
+        <META HTTP-EQUIV="Refresh" CONTENT="0;URL=noJavaScript.html">
+    </noscript>
+
+    <!-- NAVIGATION BAR -->
+    <nav class="card">
+        <div id="navbarContent">
+            <!-- LOGO -->
+            <div id="logo">
+                <a id="companyName" href="index.html">CodeEagle</a>
+                <img src="graphics/logo.png" alt="Logo Adler" width="55px" height="45px">
+            </div>
+
+            <!-- BUTTON TO OPEN THE NAVIGATION BAR (for smaller devices) -->
+            <input type="checkbox" id="toggle_button">
+                <label for="toggle_button" class="toggle_button">
+                    <span></span> <!-- lines -->
+                    <span></span>
+                    <span></span>
+                </label>
+            
+            <!-- ELEMENTS OF THE NAVIGATION BAR -->
+            <ul>
+                <li><a href="comingSoon.html">Demnächst</a></li>
+                <li><a href="download.html">Downloads</a></li>
+                <li><a href="changelog.html">Änderungen</a></li>
+                <li><a href="credits.html">Referenz</a></li>
+                <li><a href="aboutMe.html">Über mich</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- CONTENT -->
+    <section id="content">
+        <div class="card">
+            <!-- IMAGE SLIDER -->
+            <div class="slider-container">
+                <!-- IMAGES -->
+                <div class="image-container">
+                    <img src="graphics/software/towerofhanoi.png" alt="towerofhanoi">
+                    <img src="graphics/software/shutdownmanager.png" alt="shutdownmanager">
+                    <img src="graphics/software/onesound-mp.png" alt="onesound-mp">
+                    <img src="graphics/software/filemanager.png" alt="filemanager">
+                    <img src="graphics/software/vacuumcleanersimulator.png" alt="vacuumcleanersimulator">
+                    <img src="graphics/software/warandpeace.png" alt="warandpeace">
+                    <img src="graphics/software/pong.png" alt="pong">
+                    <img src="graphics/software/rockpaperscissors.png" alt="rockpaperscissors">
+                    <img src="graphics/software/yahtzee.png" alt="yahtzee">
+                    <img src="graphics/software/destroythenumbers.png" alt="destroythenumbers">
+                    <img src="graphics/software/trainyourbrain.png" alt="trainyourbrain">
+                    <img src="graphics/software/tictactoe.png" alt="tic-tac-toe">
+                    <img src="graphics/software/gameoflife.png" alt="gameoflife">
+                    <img src="graphics/software/clock.png" alt="clock">
+                    <img src="graphics/software/counter.png" alt="counter">
+                </div>
+
+                <p id="softwarename"></p> <!-- Software name label -->
+
+                <!-- BUTTON - ARROWS LEFT AND RIGHT -->
+                <img src="graphics/left-arrow.png" alt="left-arrow" class="ibtn prev">
+                <img src="graphics/right-arrow.png" alt="right-arrow" class="ibtn next">
+            </div>
+
+            <!-- SEARCH -->
+            <div class="search">
+                <div class="icon"></div>
+                <div class="input">
+                    <input type="text" onkeyup="doSearch()" autocomplete="off" maxlength="10" id="mySearch" placeholder="Suchen ...">
+                </div>
+                <span class="clear" onclick="document.getElementById('mySearch').value = ''; doSearch();"></span>
+            </div>
+
+            <!-- FILTER -->
+            <div class="card filter">
+                <button class="btn activated" onclick="filterSelection('')">Alles</button>
+                <button class="btn centerButton" onclick="filterSelection('software')">Software</button>
+                <button class="btn" onclick="filterSelection('games')">Games</button>
+            </div>
+
+            <!-- SOFTWARE CARDS -->
+            <div id="softwarecards">
+                <div class="item games" id="towerofhanoi">
+                    <div class="left">
+                        <span></span>
+                        <div class="content">
+                            <h1>Tower Of Hanoi<img src="graphics/new.png" alt="new"></h1>
+
+                            <p>
+                                Schaffst Du es, den Turm von dem linken Stapel auf den rechten zu projizieren, wenn du immer nur 1 Klotz des
+                                Turms bewegen darfst? In 3 verschiedenen Schwierigkeitsstufen wird dein Denkvermögen getestet und deine benötigte
+                                Zeit und verwendeten Züge gemessen.
+                                <br><br>
+                                Dieses Spiel hat dein Interesse geweckt? 
+                                <br>
+                                Dann downloade es doch ganz einfach und komplett kostenlos <a href="download.html#towerofhanoi">hier</a> !
+                                <br><br>
+                                <i>#towerofhanoi #game #braintraining #singleplayer #logic #free</i>
+                            </p>
+
+                            <div class="video">
+                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ZAgN4RL9_qw" title="YouTube video player" frameborder="0" 
+                                loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item software" id="shutdownmanager">
+                    <div class="right">
+                        <span></span>
+                        <div class="content">
+                            <h1>Shutdown Manager</h1>
+
+                            <p>
+                                Du willst deine Lieblingsserie schauen bis Du eingeschlafen bist, aber dein Laptop soll nicht die ganze Nacht
+                                an sein?<br>Kein Problem mit dem Shutdown Manager. Mit einem Klick den Rechner neustarten oder herunterfahren.
+                                Alternativ kannst Du einen Timer stellen, wann dein Laptop herunterfahren / neustarten soll.
+                                <br><br>
+                                Dieses Programm hat dein Interesse geweckt? 
+                                <br>
+                                Dann downloade es doch ganz einfach und komplett kostenlos <a href="download.html#shutdownmanager">hier</a> !
+                                <br><br>
+                                <i>#shutdownmanager #software #shutdown #restart #timer #free</i>
+                            </p>
+
+                            <div class="video">
+                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/YFrNCCxyn0o" title="YouTube video player" frameborder="0" 
+                                loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item software" id="onesound-mp">
+                    <div class="left">
+                        <span></span>
+                        <div class="content">
+                            <h1>OneSound-MP</h1>
+
+                            <p>
+                                Dieser Musik-Player sammelt alle deine lokalen Lieder aus verschiedenen Verzeichnissen, so das alle deine 
+                                Lieblingssongs an einem Ort zu finden sind. Über eine Suchfunktion kann der passende Song gefunden und abgespielt
+                                werden. Natürlich können auch einzelne Ordner abgespielt oder eigene Playlisten erstellt werden.
+                                Damit Du deine zuletzt gespielten Lieder schnell wiederfindest, werden diese in eine Liste gespeichert und sind so
+                                leichter wiederzufinden. 
+                                <br><br>
+                                Dieses Programm hat dein Interesse geweckt? 
+                                <br>
+                                Dann downloade es doch ganz einfach und komplett kostenlos <a href="download.html#onesound-mp">hier</a> !
+                                <br><br>
+                                <i>#onesound-mp #software #music #playlist #play #free #useful</i>
+                            </p>
+
+                            <div class="video">
+                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/xKtnX6KGy_k" title="YouTube video player" frameborder="0" 
+                                loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item software" id="filemanager">
+                    <div class="right">
+                        <span></span>
+                        <div class="content">
+                            <h1>File Manager</h1>
+
+                            <p>
+                                Dieses Tool ermöglicht dir nach Dateien aus mehreren Verzeichnissen gleichzeitig, schnell und effizient zu suchen.
+                                Ordnerinhalte können abgeglichen werden und Dateien direkt innerhalb der Software umbenannt werden.
+                                Entweder einzelne oder mehrere Dateien gleichzeitig, von Hand oder per zuvor definierten Regeln.
+                                Filter nach Dateiendungen und Verzeichnissen optimieren die Suche.
+                                <br><br>
+                                Dieses Programm hat dein Interesse geweckt?
+                                <br>
+                                Dann downloade es doch ganz einfach und komplett kostenlos <a href="download.html#filemanager">hier</a> !
+                                <br><br>
+                                <i>#filemanager #software #comparison #edit #files #free #useful</i>
+                            </p>
+
+                            <div class="video">
+                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/flKBYewrhfg" title="YouTube video player" frameborder="0" 
+                                loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item games" id="vacuumcleanersimulator">
+                    <div class="left">
+                        <span></span>
+                        <div class="content">
+                            <h1>Vacuum Cleaner Simulator</h1>
+
+                            <p>
+                                Ein einfacher Simulator, in dem man einen Staubsauger steuert und den Boden reinigen muss. 
+                                Wenn der Boden erfolgreich gereinigt wurde, hat man den Level geschafft. Es gibt verschiedene Grafiken zur Auswahl, 
+                                um das Spiel etwas abwechselungsreicher zu gestalten.
+                                <br><br>
+                                Dieses Spiel hat dein Interesse geweckt? 
+                                <br>
+                                Dann downloade es doch ganz einfach und komplett kostenlos <a href="download.html#vacuumcleanersimulator">hier</a> !
+                                <br><br>
+                                <i>#vacuumcleaner #game #singleplayer #clean #trash #trashbin #simulator #free</i>
+                            </p>
+
+                            <div class="video">
+                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/TbO-8BC4NfY" title="YouTube video player" frameborder="0" 
+                                loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item games" id="warandpeace">
+                    <div class="right">
+                        <span></span>
+                        <div class="content">
+                            <h1>War And Peace</h1>
+
+                            <p>
+                                Ein einfaches Einzelspieler Kartenspiel zum Zeitvertreib. Die obersten Karten von zwei Kartenstapeln werden
+                                verglichen. Die höhere Kartenpunktzahl gewinnt und erhält beide Karten.
+                                Wer zuerst alle Karten besitzt, gewinnt!
+                                <br><br>
+                                Dieses Spiel hat dein Interesse geweckt? 
+                                <br>
+                                Dann downloade es doch ganz einfach und komplett kostenlos <a href="download.html#warandpeace">hier</a> !
+                                <br><br>
+                                <i>#warandpeace #game #singleplayer #cards #classic #free</i>
+                            </p>
+
+                            <div class="video">
+                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/_lDrYREJ9P8" title="YouTube video player" frameborder="0" 
+                                loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item games" id="pong">
+                    <div class="left">
+                        <span></span>
+                        <div class="content">
+                            <h1>Pong</h1>
+
+                            <p>
+                                Ein weiteres beliebtes 2D-Spiel mit einfacher Spielmechanik. Auch hier kannst du dich gegen 
+                                deine Freunde batteln, sowie gegen einen NPC spielen. Grundsätzlich können verschiedene Einstellungen 
+                                getroffen werden, um das Spielerlebnis individuell anzupassen. Dadurch wird das Spiel vielseitiger 
+                                gestaltet. Außerdem warten verschiedene Items und zwei weitere Spielmodi auf dich!
+                                <br><br>
+                                Dieses Spiel hat dein Interesse geweckt? 
+                                <br>
+                                Dann downloade es doch ganz einfach und komplett kostenlos <a href="download.html#pong">hier</a> !
+                                <br><br>
+                                <i>#pong #game #singleplayer #multiplayer #classic #gamemodes #items #free</i>
+                            </p>
+
+                            <div class="video">
+                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/KIHFwO1ds_g" title="YouTube video player" frameborder="0" 
+                                loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item games" id="rockpaperscissors">
+                    <div class="right">
+                        <span></span>
+                        <div class="content">
+                            <h1>Rock Paper Scissors</h1>
+
+                            <p>
+                                Ebenfalls ein Klassiker, mit simplen Spielprinzip. Du hast die Wahl zwischen verschiedenen Symbolen. 
+                                Die Symbole gewinnen beziehungsweise verlieren gegen andere Symbole. Triffst du die richtigen Entscheidungen 
+                                und kannst gegen den NPC gewinnen?
+                                <br><br>
+                                Dieses Spiel hat dein Interesse geweckt? 
+                                <br>
+                                Dann downloade es doch ganz einfach und komplett kostenlos <a href="download.html#rockpaperscissors">hier</a> !
+                                <br><br>
+                                <i>#rockpaperscissors #game #singleplayer #classic #free</i>
+                            </p>
+
+                            <div class="video">
+                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/bjxbCTJVNXg" title="YouTube video player" frameborder="0" 
+                                loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item games" id="yahtzee">
+                    <div class="left">
+                        <span></span>
+                        <div class="content">
+                            <h1>Yathzee</h1>
+
+                            <p>
+                                Yahtzee - auch Kniffel genannt - ist ein simples Würfelspiel, das sich sehr gut zum Spielen mit den 
+                                Freunden oder der Familie eignet. Bei diesem Klassiker muss man mit 5 Würfeln bestimmte Zahlen oder 
+                                Zahlenrreihenfolgen erzeugen. Wer am Ende die meisten Punkte hat, gewinnt!
+                                <br><br>
+                                Dieses Spiel hat dein Interesse geweckt? 
+                                <br>
+                                Dann downloade es doch ganz einfach und komplett kostenlos <a href="download.html#yahtzee">hier</a> !
+                                <br><br>
+                                <i>#yahtzee #game #singleplayer #multiplayer #dicegame #familyfriendly #free</i>
+                            </p>
+
+                            <div class="video">
+                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/BIXaAp9YjqU" title="YouTube video player" frameborder="0" 
+                                loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item games" id="destroythenumbers">
+                    <div class="right">
+                        <span></span>
+                        <div class="content">
+                            <h1>Destroy The Numbers</h1>
+
+                            <p>
+                                Destroy The Numbers ist ein Spiel bei dem die Aufgabe darin besteht das Spielfeld solange wie möglich 
+                                frei zu halten. Um dies zu erreichen müssen Zahlen kombiniert werden. Das klingt auf den ersten Blick einfach, 
+                                doch die Schwierigkeit steigt im Laufe der Runde. Natürlich gibt es auch Hilfitems, die Dir helfen werden länger
+                                durchzuhalten, doch alles hat seinen Preis!
+                                <br><br>
+                                Dieses Spiel hat dein Interesse geweckt? 
+                                <br>
+                                Dann downloade es doch ganz einfach und komplett kostenlos <a href="download.html#destroythenumbers">hier</a> !
+                                <br><br>
+                                <i>#destroythenumbers #game #singleplayer #logic #reaction #skill #free</i>
+                            </p>
+
+                            <div class="video">
+                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/bpKF-ivytvI" title="YouTube video player" frameborder="0" 
+                                loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item games" id="trainyourbrain">
+                    <div class="left">
+                        <span></span>
+                        <div class="content">
+                            <h1>Train Your Brain</h1>
+
+                            <p>
+                                Täglich sollte das Gehirn ein bisschen gefordert werden. Aus diesem Grund gibt es dieses Gehirn-Trainings-Spiel, 
+                                bei dem täglich und zugleich spielerisch das Gehirn trainiert werden kann.
+                                Es gibt Tagesherausforderungen und ein Levelsystem. So macht Gehirntraining einfach nur Spaß!
+                                Hinweis: Es werden neue Level hinzugefügt, damit eine Abwechslung der Level erhalten bleibt.
+                                <br><br>
+                                Dieses Spiel hat dein Interesse geweckt? 
+                                <br>
+                                Dann downloade es doch ganz einfach und komplett kostenlos <a href="download.html#trainyourbrain">hier</a> !
+                                <br><br>
+                                <i>#trainyourbrain #game #braintraining #singleplayer #logic #level #free</i>
+                            </p>
+
+                            <div class="video">
+                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/VMo8nxL5L7o" title="YouTube video player" frameborder="0" 
+                                loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item games" id="tic-tac-toe">
+                    <div class="right">
+                        <span></span>
+                        <div class="content">
+                            <h1>Tic-Tac-Toe</h1>
+
+                            <p>
+                                Tic-Tac-Toe, ein sehr einfaches Spiel, das dennoch Spaß macht und nie langweilig wird. 
+                                Trete gegen deine Freunde an! Oder spiele gegen einen NPC. 
+                                Wer als erstes 3 in einer Reihe hat gewinnt!
+                                <br><br>
+                                Dieses Spiel hat dein Interesse geweckt? 
+                                <br>
+                                Dann downloade es doch ganz einfach und komplett kostenlos <a href="download.html#tic-tac-toe">hier</a> !
+                                <br><br>
+                                <i>#tic-tac-toe #game #classic #singleplayer #multiplayer #free</i>
+                            </p>
+
+                            <div class="video">
+                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/sxjWYMPexVQ" title="YouTube video player" frameborder="0" 
+                                loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item games" id="gameOflife">
+                    <div class="left">
+                        <span></span>
+                        <div class="content">
+                            <h1>Game Of Life</h1>
+
+                            <p>
+                                Game Of Life ist ein Spiel mit simplen Regeln. Es ist ein 2D-Spiel bei dem der Nutzer eigene Konstellationen 
+                                oder auch bereits vorgefertigte Konstellationen animieren kann. Das Spielfeld besteht aus Zellen, die sterben, 
+                                beziehungsweise (wieder-) belebt werden können. So ist es möglich ganz einfach Animationen erstellen zu können. 
+                                Dieses Spiel scheint auf den ersten Blick nicht vielseitig, allerdings enthält das Spiel eine Menge weitere 
+                                Features, die dem Spiel eine gewisse Variarität mitgeben, wodurch das Spiel immer wieder neu entdeckt werden 
+                                kann und nie langweilig wird.
+                                <br><br>
+                                Dieses Spiel hat dein Interesse geweckt? 
+                                <br>
+                                Dann downloade es doch ganz einfach und komplett kostenlos <a href="download.html#gameoflife">hier</a> !
+                                <br><br>
+                                <i>#gameoflife #game #singleplayer #animation #creative #ownconstellations #free</i>
+                            </p>
+
+                            <div class="video">
+                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/0b_gNQeEtZs" title="YouTube video player" frameborder="0" 
+                                loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item software" id="clock">
+                    <div class="right">
+                        <span></span>
+                        <div class="content">
+                            <h1>Clock</h1>
+                            
+                            <p>
+                                Alarm Clock ist, wie es der Name schon verspricht ein Wecker, der (neben der Weckfunktion und der Uhrzeitanzeige) 
+                                auch einen Timer und eine Stoppuhr enthält. 
+                                Als Features kann der Nutzer die Farbe des Displays ändern, genauso wie seinen eigenen Wecksound 
+                                einbinden und vieles mehr.
+                                <br><br>
+                                Dieses Programm hat dein Interesse geweckt? 
+                                <br>
+                                Dann downloade es doch ganz einfach und komplett kostenlos <a href="download.html#clock">hier</a> !
+                                <br><br>
+                                <i>#alarmclock #software #clock #timer #stopwatch #ownsound #free #useful</i>
+                            </p>
+
+                            <div class="video">
+                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/K7cGI0vmtXg" title="YouTube video player" frameborder="0" 
+                                loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item software" id="counter">
+                    <div class="left">
+                        <span></span>
+                        <div class="content">
+                            <h1>Counter</h1>
+                            
+                            <p>
+                                Counter ist, wie es der Name schon verspricht, ein Zähler, der hochzählen, als auch runterzählen kann. 
+                                Die Zahl wird beim Schließen des Programmes erhalten bleiben. Ein kleines aber feines Programm um das 
+                                Zählen zu erleichtern.
+                                <br><br>
+                                Dieses Programm hat dein Interesse geweckt? 
+                                <br>
+                                Dann downloade es doch ganz einfach und komplett kostenlos <a href="download.html#counter">hier</a> !
+                                <br><br>
+                                <i>#counter #software #free #useful</i>
+                            </p>
+                            
+                            <div class="video">
+                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/5GZhYkfkQTA" title="YouTube video player" frameborder="0" 
+                                loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <div class="card" id="footer">
+        <div id="footercontent">
+            <div id="links">
+                <a href="imprint.html">Impressum</a>
+                <div id="youtube">
+                    <img src="graphics/youtube.png" alt="Logo YouTube" width="45px" height="45px">
+                    <a href="https://www.youtube.com/channel/UC44FC65CoOuQpyx6BkdPasA">CodeEagle</a>
+                </div>
+                <div id="instagram">
+                    <img src="graphics/instagram.png" alt="Logo Instagram" width="40px" height="40px">
+                    <a href="https://www.instagram.com/_codeeagle_/">_codeeagle_</a>
+                </div>
+            </div>
+            <div id="text">
+                <p>Copyright &copy; 2022 <span>Julian Lamm</span></p>
+                <p>Webseite zuletzt aktualisiert am: <span>07.09.2022</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="javascript/search.js"></script>
+    <script src="javascript/imageSlider.js"></script>
+    <script src="javascript/toggleButtonAction.js"></script> <!-- open-menu-button animation when the button will be clicked -->
+</body>
+</html>
