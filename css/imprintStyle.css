@@ -1,0 +1,59 @@
+#content .card h1 { /* title */
+    font-size: 45px;
+    color: var(--foreground-color);
+
+    text-align: center;
+}
+
+#content .card h2 { /* subtitles */
+    font-size: 35px;
+    color: var(--foreground-color-2);
+    
+    text-align: center;
+    margin: 15px 0;
+}
+
+#content .card p b {
+    color: rgb(230, 230, 230);
+}
+
+#content .card p a { /* link */
+    color: var(--foreground-color);
+}
+
+#content .card p span {
+    font-family: Verdana, sans-serif;
+    font-size: 23px;
+}
+
+#content .card ol {
+    padding-left: 25px;
+}
+
+#content .card hr { /* line between two software */
+    border: none;
+    border-top: 3px solid rgba(5, 210, 200, 0.5);
+}
+
+/* SMALLER DEVICES */
+@media(max-width: 750px) {
+    #content .card {
+        word-wrap: break-word;
+    }
+
+    #content .card h1 {
+        font-size: 35px;
+    }
+
+    #content .card h2 {
+        font-size: 26px;
+    }
+
+    #content .card p,
+    #content .card p b,
+    #content .card p a,
+    #content .card p span,
+    #content .card ol li {
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,15 @@
+/* CARD */
+#content .card .item .description b {
+    color: var(--foreground-color);
+    font-family: Verdana, sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+}
+
+/* SMALLER DEVICES */
+@media(max-width: 450px) {
+    #content .card .item .description b {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+}

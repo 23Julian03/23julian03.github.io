@@ -1,0 +1,292 @@
+/* IMAGE SLIDER */
+#content .card .slider-container {
+    width: 90%;
+
+    position: relative;
+    margin: 0 auto;
+
+    overflow: hidden;
+}
+
+#content .card .slider-container .image-container {
+    display: flex;
+
+    transition: transform .4s ease-in-out;
+}
+
+#content .card .slider-container .image-container img {
+    width: 100%;
+}
+
+#content .card .slider-container #softwarename {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 30px;
+    color: var(--highlight-color);
+    
+    text-align: center;
+}
+
+#content .card .slider-container .ibtn {
+    width: 40px;
+    position: absolute;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    opacity: 0.5;
+    transition-duration: 0.6s;
+    
+    cursor: pointer;
+}
+
+#content .card .slider-container .ibtn:hover {
+    opacity: 1;
+    transition-duration: 0.6s;
+}
+
+#content .card .slider-container .ibtn.prev {
+    left: 10px;
+}
+
+#content .card .slider-container .ibtn.next {
+    right: 10px;
+}
+
+/* SOFTWARE CARDS */
+#content .card #softwarecards {
+    margin-top: 60px;
+}
+
+#content .card #softwarecards .item {
+    background: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+#content .card #softwarecards .item,
+#content .card #softwarecards .item .left,
+#content .card #softwarecards .item .right {
+    position: relative;
+    display: flex;
+    margin-bottom: 15px;
+}
+
+#content .card #softwarecards .item .left::before,
+#content .card #softwarecards .item .right::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+#content .card #softwarecards .item .left::after,
+#content .card #softwarecards .item .right::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    
+    filter: blur(30px);
+}
+
+#content .card #softwarecards .item:nth-child(3n) ::before,
+#content .card #softwarecards .item:nth-child(3n) ::after {
+    background: linear-gradient(45deg, #4dff03, #00d0ff);
+}
+
+#content .card #softwarecards .item:nth-child(3n+1) ::before,
+#content .card #softwarecards .item:nth-child(3n+1) ::after {
+    background: linear-gradient(45deg, #ffbc00, #ff0058);
+}
+
+#content .card #softwarecards .item:nth-child(3n+2) ::before,
+#content .card #softwarecards .item:nth-child(3n+2) ::after {
+    background: linear-gradient(45deg, #03a9f4, #ff0058);
+}
+
+#content .card #softwarecards .item .left span,
+#content .card #softwarecards .item .right span {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+    
+    background: rgba(0, 0, 0, 0.45);
+    transition-duration: 0.8s;
+
+    z-index: 1;
+}
+
+#content .card #softwarecards .item .left span::before,
+#content .card #softwarecards .item .right span::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 57%;
+    height: 100%;
+
+    background: rgba(255, 255, 255, 0.1);
+}
+
+#content .card #softwarecards .item .right span::before {
+    position: relative;
+    float: right;
+}
+
+#content .card #softwarecards .item .content {
+    width: 100%;
+    height: 100%;
+    min-height: 320px;
+    
+    padding: 20px 15px;
+    
+    z-index: 1;
+}
+
+#content .card #softwarecards .item .content h1 {
+    font-size: 50px;
+    color: var(--foreground-color);
+    text-shadow: 2px 2px 10px #000,
+            2px 2px 50px #000,
+            0 0 100px #000;
+
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#content .card #softwarecards .item .content img {
+    width: 45px;
+
+    position: relative;
+    
+    margin-left: 10px;
+}
+
+#content .card #softwarecards .item .content .video {
+    width: 450px;
+    height: 250px;
+    
+    position: absolute;
+    top:50%; 
+    transform: translateY(-50%);
+}
+
+#content .card #softwarecards .item .left .content .video {
+    right: 25px;
+}
+
+#content .card #softwarecards .item .right .content .video {
+    left: 24px;
+}
+
+#content .card #softwarecards .item .content p {
+    color: var(--text-color);
+    text-shadow: 2px 2px 10px #000;
+}
+
+#content .card #softwarecards .item .left .content p {
+    width: 57%;
+}
+
+#content .card #softwarecards .item .right .content p {
+    margin-left: 44%;
+}
+
+#content .card #softwarecards .item .content p a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #dbf302;
+}
+
+#content .card #softwarecards .item .content p i {
+    color: var(--highlight-color);
+}
+
+/* SMALLER DEVICES */
+@media(max-width: 1200px) {
+    #content .card #softwarecards .item .left span::before,
+    #content .card #softwarecards .item .right span::before {
+        width: 50%;
+    }
+
+    #content .card #softwarecards .item .left .content p,
+    #content .card #softwarecards .item .right .content p {
+        width: 100%;
+        margin: 0;
+    }
+
+    #content .card #softwarecards .item .content .video,
+    #content .card #softwarecards .item .right .content .video {
+        position: relative;
+        margin: 10px auto;
+        left: 0;
+        right: 0;
+
+        top: 0;
+        transform: translateY(0);
+    }
+}
+
+@media(max-width: 900px) {
+    #content .card .slider-container {
+        margin-top: 10px;
+        width: 96%;
+    }
+
+    #content .card .slider-container .ibtn {
+        width: 20px;
+    }
+
+    #content .card .slider-container .ibtn.prev {
+        left: 4px;
+    }
+    
+    #content .card .slider-container .ibtn.next {
+        right: 4px;
+    }
+}
+
+@media(max-width: 530px) {
+    #content .card #softwarecards .item .content .video {
+        width: 350px;
+        height: 180px;
+    }
+}
+
+@media(max-width: 460px) {
+    #content .card .slider-container .ibtn {
+        width: 10px;
+    }
+}
+
+@media(max-width: 430px) {
+    #content .card #softwarecards .item .content .video {
+        width: 250px;
+        height: 150px;
+    }
+}
+
+@media(max-width: 300px) {
+    #content .card #softwarecards .item .content {
+        word-break: break-all;
+    }
+
+    #content .card #softwarecards .item .content h1 {
+        font-size: 33px;
+    }
+
+    #content .card #softwarecards .item .content .video {
+        width: 200px;
+        height: 125px;
+    }
+}

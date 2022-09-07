@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+/* GENERAL */
+:root { /* variables */
+    --navbar-height: 65px;
+
+    --background-color: rgb(58, 58, 70); 
+    --background-color-2: rgb(1, 48, 81);
+
+    --highlight-color: rgb(14, 249, 210);
+
+    --foreground-color: #d2e70e;
+    --foreground-color-2: #00d6cb;
+
+    --text-color: #fff;
+    --text-color-2: rgb(200, 200, 200);
+}
+
+* { /* all elements */
+    font-family: 'Raleway', Verdana, sans-serif;
+    font-size: 26px;
+    color: var(--text-color-2);
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(to bottom, var(--background-color), var(--background-color-2));
+    background-attachment: fixed;
+}
+
+/* CARD */
+.card {
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    border-right: 2px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    transition: .6s;
+    
+    user-select: none;
+}
+
+.card:hover {
+    background-color: rgba(50, 50, 50, 0.1);
+    transition: .6s;
+}
+
+/* FOOTER */
+#footer {
+    width: 100%;
+
+    margin-top: 20px;
+}
+
+#footer #footercontent {
+    width: 80%;
+    max-width: 1350px;
+
+    margin: 10px auto;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#footer #footercontent #links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 10px;
+}
+
+#footer #footercontent #links #youtube,
+#footer #footercontent #links #instagram {
+    display: flex;
+    align-items: center;
+}
+
+#footer #footercontent #links #youtube img,
+#footer #footercontent #links #instagram img {
+    margin-right: 10px;
+}
+
+#footer #footercontent #text {
+    display: flex;
+    justify-content: space-between;
+}
+
+#footer #footercontent a {
+    color: var(--foreground-color);
+
+    text-decoration: none;
+}
+
+#footer #footercontent p span {
+    font-family: Verdana, sans-serif;
+    font-size: 25px;
+}
+
+/* PAGE CONTENT */
+#content { /* content of the page */
+    max-width: 1200px;
+    min-height: calc(100vh - var(--navbar-height) - 176px); /* -> footer is always on the bottom */
+    
+    margin: 0 auto;
+    margin-top: 40px;
+
+    position: relative;
+}
+
+#content .card {
+    overflow: hidden;
+
+    margin: 10px;
+    padding: 15px 10px;
+}
+
+#content .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background: rgba(255, 255, 255, 0.05);
+    pointer-events: none;
+    transform: skewX(-15deg);
+}
+
+/* NAVIGATION BAR */
+nav {
+    height: var(--navbar-height);
+}
+
+nav #navbarContent {
+    height: 100%;
+    width: 80%;
+    max-width: 1350px;
+
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+/* LOGO */
+nav #navbarContent #logo {
+    height: 100%;
+
+    display: flex;
+    margin-right: 25px;
+    align-items: center;
+}
+
+nav #navbarContent #logo #companyName {
+    height: 100%;
+    
+    font-size: 45px;
+    font-weight: bold;
+    font-style: italic;
+    text-shadow: 3px 3px 3px var(--highlight-color);
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+nav #navbarContent #logo img {
+    padding-left: 8px;
+}
+
+/* LIST OF ELEMENTS IN THE NAVIGATION BAR */
+nav #navbarContent ul {
+    height: 100%;
+
+    display: flex;
+
+    list-style: none;
+}
+
+/* ELEMENT */
+nav #navbarContent ul li { /* element */
+    height: 100%;
+    width: 170px;
+
+    border-bottom: 4px solid var(--background-color);
+}
+
+nav #navbarContent ul li:after { /* element animation (bottom-border) */
+    content: '';
+    display: block;
+    
+    border-bottom: 4px solid rgba(14, 249, 210, 0.6);
+    
+    transform: scaleX(0);
+    transition: transform 300ms ease-in-out;
+}
+
+nav #navbarContent ul li:hover:after {  /* element animation (bottom-border) */
+    transform: scaleX(1);
+}
+
+nav #navbarContent ul #active { /* the selected element, because this page is opened currently */
+    color: rgba(14, 249, 210, 0.9);
+    border-color: var(--highlight-color);
+}
+
+nav #navbarContent ul li a { /* label of the elements */
+    height: 100%;
+    
+    font-size: 26px;
+    text-decoration: none;
+    color: var(--text-color);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* OPEN NAVIGATION BAR-BUTTON (toggle button) */
+nav #navbarContent input[type="checkbox"] { /* checkbox for the toggle button is not visible */
+    display: none;
+}
+
+.toggle_button {
+    width: 30px;
+    height: 23px;
+   
+    position: absolute;
+    top: 18px;
+    right: 25px;
+
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+
+    cursor: pointer;
+}
+
+/* three lines inside the button */
+.toggle_button span {
+    height: 4px;
+    width: 33px;
+
+    background: var(--text-color);
+    border-radius: 6px;
+	
+	transform-origin: 0 0;
+	transition: 0.4s;
+}
+
+/* toggle_button animation */
+.toggle_button:hover span:nth-child(2) {
+	transform: translateX(10px);
+	background-color: var(--highlight-color);
+}
+
+.toggle_button.is-active span:nth-child(1) {
+	transform: translate(0px, -2px) rotate(45deg);
+}
+
+.toggle_button.is-active span:nth-child(2) {
+	opacity: 0;
+	transform: translateX(15px);
+}
+
+.toggle_button.is-active span:nth-child(3) {
+	transform: translate(-2px, 3px) rotate(-45deg);
+}
+
+.toggle_button.is-active:hover span {
+	background-color: var(--highlight-color);
+}
+
+/* SMALLER DEVICES */
+@media(max-width: 1460px) {
+    nav #navbarContent {
+        justify-content: center;
+    }
+}
+
+@media(max-width: 1190px) {
+    /* FOOTER */
+    #footer #footercontent {
+        width: 96%;
+    }
+
+    #footer #footercontent #text {
+        display: block;
+    }
+    
+    /* OPEN MENU-BUTTON */
+    .toggle_button {
+        display: flex;
+    }
+
+    /* LOGO */
+    nav #navbarContent #logo {
+        left: 10px;
+        position: absolute;
+    }
+
+    /* LIST OF ELEMENTS IN THE NAVIGATION BAR */
+    nav #navbarContent ul {
+        height: min-content;
+        width: 90%;
+        max-width: 700px;
+
+        display: block;
+        position: absolute;
+        top: var(--navbar-height);
+
+        border: 2px solid rgba(255, 255, 255, 0.25);
+        border-right: 2px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+
+        box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+        background: linear-gradient(rgba(64, 75, 92, 0.95), rgba(39, 58, 83, 0.95));
+        backdrop-filter: blur(10px);
+
+        transform: translateY(-25em);
+        transition: 1.5s;
+    }
+
+    #toggle_button:checked ~ ul { /* toggle button is clicked */
+        transform: rotateY(0);
+        transition: 1.5s;
+    }
+
+    nav #navbarContent ul li {
+        height: 55px;
+        width: 100%;
+
+        margin-bottom: 8px;
+
+        border-bottom: 4px solid rgb(179, 179, 179);
+    }
+
+    nav #navbarContent ul #active a {
+        color: var(--highlight-color);
+        letter-spacing: 3px;
+        font-weight: bold;
+        font-size: 30px;
+    }
+}
+
+@media(max-width: 740px) {
+    #footer #footercontent {
+        width: 98%;
+    }
+
+    #footer #footercontent p,
+    #footer #footercontent p span {
+        font-size: 20px;
+    }
+}
+
+@media(max-width: 590px) {
+    #footer #footercontent #links {
+        display: block;
+        
+    }
+
+    #footer #footercontent #links #youtube, 
+    #footer #footercontent #links #instagram {
+        justify-content: center;
+        margin: 7px 0;
+    }
+}
+
+
+@media(max-width: 370px) {
+    /* LOGO - IMAGE */
+    nav #navbarContent #logo img {
+        display: none; /* not vivisble */
+    }
+}
+
+@media(max-width: 320px) {
+    /* LOGO NAME */
+    nav #navbarContent #logo #companyName {
+        font-size: 35px;
+        text-shadow: 1px 1px 3px var(--highlight-color);
+
+        padding-top: 8px;
+    }
+
+    .toggle_button {
+        right: 20px;
+    }
+}

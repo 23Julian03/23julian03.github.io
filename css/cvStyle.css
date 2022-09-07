@@ -1,0 +1,361 @@
+/* GENERAL */
+#content .card {
+    padding: 0;
+    padding-right: 5px;
+    padding-bottom: 10px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+#content .card .heading {
+    text-align: center;
+    margin-top: 30px;
+    
+    font-size: 30px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px #0000009e;
+    color: var(--highlight-color);
+   
+    border-radius: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    border-right: 2px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* LEFT SIDE */
+#content .card .left {
+    width: 450px;
+    float: left;
+
+    background-color: rgba(25, 189, 230, 0.4);
+}
+
+/* IMAGE */
+#content .card .left .content .portraitfoto {
+    width: 140px;
+    height: 160px;
+    margin: 10px auto;
+
+    filter: drop-shadow(-2px 5px 10px rgba(0, 12, 10, 0.532));
+}
+
+#content .card .left .content .portraitfoto .hexagon {
+    height: 100%;
+    width: 100%;
+
+    clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
+}
+
+#content .card .left .content .portraitfoto .hexagon img {
+    width: 100%;
+    height: 100%;
+    
+    object-fit: cover;
+}
+
+/* NAME */
+#content .card .left .content .job {
+    width: 400px;
+    
+	margin: 0 auto;
+}
+
+#content .card .left .content .job .name {
+    text-shadow: 4px 4px #0000009e;
+    font-weight: bolder;
+    font-size: 33px;
+    letter-spacing: 4px;
+    color: var(--highlight-color);
+}
+
+/* JOB DESCRIPTION */
+#content .card .left .content .job span {
+    width: 99%;
+    height: 2px;
+    
+    display: block;
+    float: left;
+    margin: 5px auto;
+    
+    background: var(--highlight-color);
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.649);
+}
+
+#content .card .left .content .job h2 {
+    font-size: 22px;
+    letter-spacing: 0.3px;
+    text-shadow: 2px 2px #0000009e;
+}
+
+/* CONTACT AND FURTHER */
+#content .card .left .content .contact,
+#content .card .left .content .further {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    padding: 5px 5px;
+
+    font-family: Verdana, sans-serif;
+    font-size: 20px;
+    color: var(--text-color);
+    text-shadow: 2px 2px #0000009e;
+
+    border-radius: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    border-right: 2px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+#content .card .left .content .contact .icon,
+#content .card .left .content .further .icon {
+    min-width: 52px;
+    min-height: 52px;
+    max-width: 52px;
+    max-height: 52px;
+    margin-right: 10px;
+
+    border-radius: 50%;
+    box-shadow: 4px 4px 5px #1b1b1bd2 inset;
+    background-color: rgba(148, 203, 229, 0.441);
+}
+
+#content .card .left .content .contact .icon img,
+#content .card .left .content .further .icon img {
+    width: 33px;
+    height: 33px;
+
+    position: relative;
+    top: 11px;
+    left: 10px;
+}
+
+/* SKILLS */
+#content .card .left .content .skills {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    padding: 5px 10px;
+    
+    border-radius: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    border-right: 2px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+#content .card .left .content .skills .name {
+    width: 100%;
+
+    font-size: 20px;
+    letter-spacing: 3px;
+    color: var(--text-color);
+    text-shadow: 2px 2px #0000009e;
+}
+
+#content .card .left .content .skills .num {
+    font-family: Verdana, sans-serif;
+    font-size: 20px;
+    
+    color: var(--text-color);
+    text-shadow: 2px 2px #0000009e;
+}
+
+#content .card .left .content .skills .bar { /* bar */
+    width: 44%;
+
+    position: absolute;
+    left: 36%;
+    
+    margin: 0 auto;
+    margin-top: 10px;
+
+    border-radius: 20px;
+
+    background-color: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(10px);
+}
+
+#content .card .left .content .skills .bar div { /* bar filling */
+    width: 0;
+    height: 15px;
+
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(13, 219, 95, 0.7)0%, rgba(103, 252, 232, 0.7)100%);
+    box-shadow: 0 0 5px rgba(165, 165, 165, 0.6);
+}
+
+#content .card .left .content .skills #bar1 {
+    width: 60%;
+}
+
+#content .card .left .content .skills #bar2 {
+    width: 50%;
+}
+
+#content .card .left .content .skills #bar3 {
+    width: 70%;
+}
+
+#content .card .left .content .skills #bar4 {
+    width: 90%;
+}
+
+#content .card .left .content .skills #bar5 {
+    width: 80%;
+}
+
+/* RIGHT SIDE */
+#content .card .right {
+    width: calc(100% - 464px);
+    float: right;
+    margin-top: 15px;
+}
+
+#content .card .right .heading {
+    text-align: left;
+    padding: 7px 20px;
+}
+
+#content .card .right .heading:first-child {
+    margin-top: -15px;
+}
+
+#content .card .right .content ul {
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+#content .card .right .content ul li { /* element */
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+
+#content .card .right .content ul li::before { /* circle */
+    content: '';
+    position: absolute;
+    top: 9px;
+    left: 0px;
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+    border: 3px solid var(--highlight-color);
+}
+
+#content .card .right .content ul li::after { /* line */
+    content: '';
+    position: absolute;
+    top: 21px;
+    left: 5px;
+    
+    width: 3px;
+    height: calc(100% + 20px);
+    
+    background: var(--highlight-color);
+}
+
+#content .card .right .content ul li:last-child {
+    margin-bottom: 0;
+}
+
+#content .card .right .content ul li .date {
+    font-family: Verdana, sans-serif;
+    color: rgb(231, 231, 231);
+
+    margin-bottom: 10px;
+}
+
+#content .card .right .content ul li .info .title {
+    margin-bottom: 5px;
+}
+
+#content .card .right .content ul li .info p {
+    font-size: 22px;
+}
+
+/* SMALLER DEVICES */
+@media(max-width: 800px) {
+    #content {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    #content .card {
+        padding: 0;
+        padding-bottom: 10px;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    #content .card .left {
+        width: 100%;
+
+        float: none;
+    }
+
+    #content .card .right {
+        width: 100%;
+
+        float: none;
+        padding: 15px 5px;
+    }
+
+    #content .card .right .content ul li .date {
+        font-size: 22px;
+    }
+    
+    #content .card .right .content ul li .info p {
+        font-size: 20px;
+        word-wrap: break-word;
+    }
+}
+
+@media(max-width: 480px) {
+    #content .card .heading {
+        word-wrap: break-word;
+    }
+
+    #content .card .left .content .job {
+        width: 96%;
+        word-wrap: break-word;
+    }
+
+    #content .card .left .content .job .name {
+        font-size: 25px;
+        text-shadow: 2px 2px #0000009e;
+
+        text-align: center;
+    }
+
+    #content .card .left .content .contact,
+    #content .card .left .content .further {
+        width: 100%;
+        font-size: 17px;
+        word-break: break-all;
+    }
+
+    #content .card .left .content .skills .name {
+        text-align: left;
+    }
+
+    #content .card .left .content .skills .bar {
+        width: 40%;
+        left: 40%;
+    }
+}
+
+@media(max-width: 380px) {
+    #content .left .content .skills .bar {
+        display: none;
+    }
+}

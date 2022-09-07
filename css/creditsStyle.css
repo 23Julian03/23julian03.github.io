@@ -1,0 +1,27 @@
+/* CARD */
+#content .card .item a { /* link */
+    display: block;
+    text-decoration: none;
+
+    margin-top: 5px;
+
+    cursor: pointer;
+}
+
+#content .card .item a:hover {
+    font-weight: bold;
+    text-decoration: underline;
+	color: var(--foreground-color);
+}
+
+#content .card .item a:last-child {
+    margin-bottom: 10px;
+}
+
+/* SMALLER DEVICES */
+@media(max-width: 450px) {
+    #content .card .item a {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+}

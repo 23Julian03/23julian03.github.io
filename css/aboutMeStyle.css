@@ -1,0 +1,432 @@
+/* BACKGROUND PARTICLES */
+.background { /* background */
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: -1;
+}
+
+.glowing { /* area of the particles */
+    height: 100%;
+    min-width: 750px;
+
+    position: relative;
+    margin: -150px;
+    
+    transform-origin: right;
+    animation: colorChange 12s linear infinite;
+}
+
+.glowing:nth-child(even) {
+    transform-origin: left;
+}
+
+@keyframes colorChange { /* change the color */
+    0% {
+        filter: hue-rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        filter: hue-rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.glowing span {
+    position: absolute;
+    top: calc(80px * var(--i));
+    left: calc(80px * var(--i));
+    bottom: calc(80px * var(--i));
+    right: calc(80px * var(--i));
+}
+
+.glowing span::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -8px;
+    
+    width: 15px;
+    height: 15px;
+    
+    background: #f00;
+    
+    border-radius: 50%;
+}
+
+.glowing span:nth-child(3n + 1)::before {
+    background: rgba(134, 255, 0, 1);
+    box-shadow: 0 0 20px rgba(134, 255, 0, 1),
+                0 0 40px rgba(134, 255, 0, 1),
+                0 0 60px rgba(134, 255, 0, 1),
+                0 0 80px rgba(134, 255, 0, 1),
+                0 0 0 8px rgba(134, 255, 0, .1);
+}
+
+.glowing span:nth-child(3n + 2)::before {
+    background: rgba(255, 214, 0, 1);
+    box-shadow: 0 0 20px rgba(255, 214, 0, 1),
+                0 0 40px rgba(255, 214, 0, 1),
+                0 0 60px rgba(255, 214, 0, 1),
+                0 0 80px rgba(255, 214, 0, 1),
+                0 0 0 8px rgba(255, 214, 0, .1);
+}
+
+.glowing span:nth-child(3n + 3)::before {
+    background: rgba(0, 226, 255, 1);
+    box-shadow: 0 0 20px rgba(0, 226, 255, 1),
+                0 0 40px rgba(0, 226, 255, 1),
+                0 0 60px rgba(0, 226, 255, 1),
+                0 0 80px rgba(0, 226, 255, 1),
+                0 0 0 8px rgba(0, 226, 255, .1);
+}
+
+/* background animation */
+.glowing span:nth-child(3n + 1) {
+    animation: animate 30s alternate infinite;
+}
+
+.glowing span:nth-child(3n + 2) {
+    animation: animate-reverse 9s alternate infinite;
+}
+
+.glowing span:nth-child(3n + 3) {
+    animation: animate 24s alternate infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(230deg);
+    }
+}
+
+@keyframes animate-reverse {
+    0% {
+        transform: rotate(300deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* CARDS */
+#content .card h1 { /* title */
+    font-size: 35px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--foreground-color-2);
+
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+/* 
+    ------------------------
+     -- INFORMATION CARD -- 
+    ------------------------
+*/
+#content #information p a,
+#content #information p span { /* markers */
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--foreground-color);
+}
+
+#content #information p #cv {
+    font-style: italic;
+    color: var(--text-color-2);
+}
+
+#content #information p #email{ /* e-mail */
+    user-select: all;
+}
+
+/* 
+    ------------------------
+     -- HARD SKILLS CARD -- 
+    ------------------------
+*/
+#content #hardSkills {
+    width: 47%;
+}
+
+#content #hardSkills #above,
+#content #hardSkills #below { /* position of the 4 blocks */
+    display: flex;
+    justify-content: center;
+}
+
+#content #hardSkills .block { /* a block */
+    width: 180px;
+    height: 180px;
+
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 20px;
+    
+    border-radius: 50%;
+}
+
+#content #hardSkills .block .box { /* label area */
+    width: calc(100% - 50px);
+    height: calc(100% - 50px);
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    background-color: rgba(59, 245, 229, 0.1);
+    box-shadow: 0 0 5px 3px rgba(59, 245, 229, 0.1);
+
+    border-radius: 50%;
+}
+
+#content #hardSkills .block .box::before { /* circle */
+    position: absolute;
+    content: '';
+    width: calc(100% + 24px);
+    height: calc(100% + 24px);
+    
+	border-radius: 50%;
+    border: 4px solid #353535;
+}
+
+#content #hardSkills .block .box .number span { /* label */
+    color: #fff;
+}
+
+#content #hardSkills .block .box .number .num { /* percentage number */
+    font-family: Verdana, sans-serif;
+    font-size: 37px;
+}
+
+#content #hardSkills .block .box .number .sub { /* percentage letter */
+    font-size: 22px;
+}
+
+#content #hardSkills .block .box .title { /* description of the box like HTML, CSS, JavaScript or Java */
+    font-size: 19px;
+    color: rgb(237, 237, 237);
+}
+
+#content #hardSkills .block .dots { /* dot for the animation */
+    width: 100%;
+    height: 100%;
+
+    display: block;
+    position: absolute;
+    z-index: 2;
+    
+    border-radius: 50%;
+
+    transition: 2s transform, 2s opacity ease;
+}
+
+#content #hardSkills .block .dots::after {
+    position: absolute;
+    content: '';
+    
+    width: 14px;
+    height: 14px;
+
+    top: 3px;
+    left: 50%;
+
+    border-radius: 50%;
+    background-color: #f00466e4;
+    box-shadow: 0 0 5px 2px #f00466e4;
+    
+    transform: translateX(-50%);
+}
+
+#content #hardSkills .block .svg { /* circle */
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    
+    fill: none;
+    transform: rotate(-90deg);
+}
+
+#content #hardSkills .block .svg .circle {
+    stroke: url(#gradientStyle);
+    stroke-width: 7px;
+    stroke-dasharray: 503;
+    stroke-dashoffset: 503;
+    
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    transition: 2s stroke-dashoffset;
+}
+
+/* 
+    ------------------------
+     -- SOFT SKILLS CARD -- 
+    ------------------------
+*/
+#content #softSkills {
+    width: 47%;
+}
+
+#content #softSkills .skills { /* skill */
+    padding-bottom: 20px;
+}
+
+#content #softSkills .details { /* label */
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+#content #softSkills .details .num { /* percentage label */
+    font-family: Verdana, sans-serif;
+}
+
+#content #softSkills .bar { /* bar */
+    background-color: rgba(255, 255, 255, 0.06);
+    
+    margin-top: 10px;
+    
+    border-radius: 20px;
+    
+    backdrop-filter: blur(10px);
+}
+
+#content #softSkills .bar div { /* bar filling */
+    width: 0;
+    height: 17px;
+    
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(219, 13, 109, 0.7)0%, rgba(252, 103, 103, 0.7)100%);
+    box-shadow: 0 0 5px rgba(165, 165, 165, 0.6);
+}
+
+/* animation */
+/* bar 1 */
+#bar1 {
+    animation: fill1 2s forwards;
+}
+
+@keyframes fill1 {
+    100% {
+        width: 70%;
+    }
+}
+
+/* bar 2 */
+#bar2 {
+    animation: fill2 2s forwards;
+}
+
+@keyframes fill2 {
+    100% {
+        width: 90%;
+    }
+}
+
+/* bar 3 */
+#bar3 {
+    animation: fill3 2s forwards;
+}
+
+@keyframes fill3 {
+    100% {
+        width: 90%;
+    }
+}
+
+/* bar 4 */
+#bar4 {
+    animation: fill4 2s forwards;
+}
+
+@keyframes fill4 {
+    100% {
+        width: 70%;
+    }
+}
+
+/* bar 5 */
+#bar5 {
+    animation: fill5 2s forwards;
+}
+
+@keyframes fill5 {
+    100% {
+        width: 80%;
+    }
+}
+
+/*
+    --------------------------
+     -- DEVICES ADJUSTMENT -- 
+    --------------------------
+*/
+/* BIGGER DEVICES */
+@media(min-width: 1000px) {
+    #content {
+        justify-content: space-between;
+    }
+
+    #content #hardSkills,
+    #content #softSkills { /* skills next to each other */
+        display: inline-table;
+        float: right;
+    }
+
+    #content #hardSkills { /* skills next to each other */
+        float: left;
+    }
+}
+
+/* SMALLER DEVICES */
+@media(max-width: 1000px) {
+    #content #hardSkills,
+    #content #softSkills {
+        width: auto;
+    }
+}
+
+@media(max-width: 490px) {
+    #content .card {
+        word-wrap: break-word;
+    }
+
+    #content #information p,
+    #content #information p a,
+    #content #information p span {
+        font-size: 20px;
+    }
+
+    #content #hardSkills #above,
+    #content #hardSkills #below { /* a block */
+        display: block;
+    }
+
+    #content #hardSkills .block {
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+    #content #softSkills .details span { /* label */
+        font-size: 16px;
+    }
+}
