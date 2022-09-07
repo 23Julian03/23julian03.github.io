@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<!-- @version 1-0-0 -->
+
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="author" content="Julian Lamm"/>
+    
+    <link href="css/mainStyle.css" rel="stylesheet">
+    <link href="css/transitions.css" rel="stylesheet">
+    <link href="css/creditsStyle.css" rel="stylesheet">
+    <link href="css/backgroundStyle.css" rel="stylesheet">
+    <link href="css/itemStyle.css" rel="stylesheet">
+    <link href="css/searchStyle.css" rel="stylesheet">
+
+    <link href="graphics/logo.png" rel="shortcut icon">
+    <title>CodeEagle - Referenzen</title>
+</head>
+
+<body>
+    <noscript> <!-- JavaScript is disabled - error page will be loaded -->
+        <META HTTP-EQUIV="Refresh" CONTENT="0;URL=noJavaScript.html">
+    </noscript>
+
+    <!-- PAGE TRANSITION -->
+    <div class="transition transition-3 is-active"></div>
+
+    <!-- NAVIGATION BAR -->
+    <nav class="card">
+        <div id="navbarContent">
+            <!-- LOGO -->
+            <div id="logo">
+                <a id="companyName" href="index.html">CodeEagle</a>
+                <img src="graphics/logo.png" alt="Logo Adler" width="55px" height="45px">
+            </div>
+
+            <!-- BUTTON TO OPEN THE NAVIGATION BAR (for smaller devices) -->
+            <input type="checkbox" id="toggle_button">
+                <label for="toggle_button" class="toggle_button">
+                    <span></span> <!-- lines -->
+                    <span></span>
+                    <span></span>
+                </label>
+            
+            <!-- ELEMENTS OF THE NAVIGATION BAR -->
+            <ul>
+                <li><a href="comingSoon.html">Demnächst</a></li>
+                <li><a href="download.html">Downloads</a></li>
+                <li><a href="changelog.html">Änderungen</a></li>
+                <li id="active"><a href="credits.html">Referenz</a></li>
+                <li><a href="aboutMe.html">Über mich</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- CONTENT -->
+    <section id="content">
+        <!-- BACKGROUND ANIMATION -->
+        <div id="background"></div>
+
+        <div class="card">
+            <!-- SEARCH -->
+            <div class="search">
+                <div class="icon"></div>
+                <div class="input">
+                    <input type="text" onkeyup="doSearch()" autocomplete="off" maxlength="10" id="mySearch" placeholder="Suchen ...">
+                </div>
+                <span class="clear" onclick="document.getElementById('mySearch').value = ''; doSearch();"></span>
+            </div>
+
+            <!-- FILTER -->
+            <div class="card filter">
+                <button class="btn activated" onclick="filterSelection('')">Alles</button>
+                <button class="btn centerButton" onclick="filterSelection('software')">Software</button>
+                <button class="btn" onclick="filterSelection('games')">Games</button>
+            </div>
+
+            <!-- LINKS OF THE USED GRAPHICS IN THE SOFTWARE AND THE WEBSITE -->
+            <!-- Bei allen Projekten -->
+            <div class="item" id="beiallenprojekten">
+                <div class="title" onclick="openClose('beiallenprojekten')">
+                    <div class="label"><p>Bei allen Projekten</p></div>
+                    <span class="plus"></span>
+                    <span class="minus"></span>
+                </div>
+
+                <div class="description">
+                    <p>
+                        <a href="https://www.flaticon.com/free-icons/maximize"      title="maximize Icons"      target="Referenz">Maximize icons created by Handicon - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/close"         title="close Icons"         target="Referenz">Close icons created by reussy - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/smaller"       title="smaller Icons"       target="Referenz">Smaller icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/dark"          title="dark Icons"          target="Referenz">Dark icons created by Aldo Cervantes - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/download"      title="download Icons"      target="Referenz">Download icons created by Ilham Fitrotul Hayat - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/image"         title="image Icons"         target="Referenz">Image icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/news"          title="news Icons"          target="Referenz">News icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/conversation"  title="conversation Icons"  target="Referenz">Conversation icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/settings"      title="settings Icons"      target="Referenz">Settings icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/support"       title="support Icons"       target="Referenz">Support icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/website"       title="website Icons"       target="Referenz">Website icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/update"        title="update Icons"        target="Referenz">Update icons created by Freepik - Flaticon</a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Webseite -->
+            <div class="item" id="webseite">
+                <div class="title" onclick="openClose('webseite')">
+                    <div class="label"><p>Webseite</p>
+                    <span class="new"><img src="graphics/new.png" alt="new"></span></div>
+                    <span class="plus"></span>
+                    <span class="minus"></span>
+                </div>
+
+                <div class="description">
+                    <p>
+                        <a href="https://www.flaticon.com/free-icons/eagle"                                 title="eagle Icons"         target="Referenz">Eagle icons created by Freepik - Flaticon</a>
+                        <a href="https://pixabay.com/de/vectors/tischler-hummer-holz-konstruktion-1453880"  title="worker"              target="Referenz">Worker graphics created by GraphicMama-team - pixabay</a>
+                        <a href="https://www.flaticon.com/free-icons/sad"                                   title="sad Icons"           target="Referenz">Sad icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/user"                                  title="user Icons"          target="Referenz">User icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/internet"                              title="internet Icons"      target="Referenz">Internet icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/mail"                                  title="mail Icons"          target="Referenz">Mail icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/phone"                                 title="phone Icons"         target="Referenz">Phone icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/location"                              title="location Icons"      target="Referenz">Location icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/flag"                                  title="flag Icons"          target="Referenz">Flag icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/de/kostenlose-icons/fuhrerschein"                 title="fuhrerschein Icons"  target="Referenz">Fuhrerschein Icons erstellt von Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/language"                              title="language Icons"      target="Referenz">Language icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/de/kostenlose-icons/ball"                         title="ball Icons"          target="Referenz">Ball Icons erstellt von Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/birthday-cake"                         title="birthday-cake Icons" target="Referenz">Birthday-cake icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/de/kostenlose-icons/monitor"                      title="monitor Icons"       target="Referenz">Monitor Icons erstellt von Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/de/kostenlose-icons/microsoft"                    title="microsoft Icons"     target="Referenz">Microsoft Icons erstellt von Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/eye"                                   title="eye Icons"           target="Referenz">Eye icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/download"                              title="download Icons"      target="Referenz">Download icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/tick"                                  title="tick Icons"          target="Referenz">Tick icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/new"                                   title="new Icons"           target="Referenz">New icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/arrow"                                 title="arrow icons"         target="Referenz">Arrow icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/instagram"                             title="instagram icons"     target="Referenz">Instagram icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/youtube"                               title="youtube icons"       target="Referenz">Youtube icons created by Freepik - Flaticon</a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- TowerOfHanoi -->
+            <div class="item games" id="towerofhanoi">
+                <div class="title" onclick="openClose('towerofhanoi')">
+                    <div class="label"><p>Tower Of Hanoi</p>
+                    <span class="new"><img src="graphics/new.png" alt="new"></span></div>
+                    <span class="plus"></span>
+                    <span class="minus"></span>
+                </div>
+
+                <div class="description">
+                    <p>
+                        <a href="https://www.flaticon.com/free-icons/pyramid-chart" title="pyramid chart Icons" target="Referenz">Pyramid chart icons created by Freepik - Flaticon</a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- ShutdownManager -->
+            <div class="item software" id="shutdownmanager">
+                <div class="title" onclick="openClose('shutdownmanager')">
+                    <div class="label"><p>Shutdown Manager</p></div>
+                    <span class="plus"></span>
+                    <span class="minus"></span>
+                </div>
+
+                <div class="description">
+                    <p>
+                        <a href="https://www.flaticon.com/free-icons/pc" title="pc Icons" target="Referenz">Pc icons created by Freepik - Flaticon</a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- OneSound-MP -->
+            <div class="item software" id="onesound-mp">
+                <div class="title" onclick="openClose('onesound-mp')">
+                    <div class="label"><p>OneSound-MP</p></div>
+                    <span class="plus"></span>
+                    <span class="minus"></span>
+                </div>
+
+                <div class="description">
+                    <p>
+                        <a href="https://www.flaticon.com/free-icons/trash"             title="trash Icons"             target="Referenz">Trash icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/send"              title="send Icons"              target="Referenz">Send icons created by Pixel perfect - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/next"              title="next Icons"              target="Referenz">Next icons created by Smashicons - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/calm"              title="calm Icons"              target="Referenz">Calm icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/play"              title="play Icons"              target="Referenz">Play icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/stop"              title="stop Icons"              target="Referenz">Stop icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/speaker"           title="speaker Icons"           target="Referenz">Speaker icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/add"               title="add Icons"               target="Referenz">Add icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/star"              title="star Icons"              target="Referenz">Star icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/album"             title="album Icons"             target="Referenz">Album icons created by Pixel perfect - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/clock"             title="clock Icons"             target="Referenz">Clock icons created by Pixelmeetup - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/repeat"            title="repeat Icons"            target="Referenz">Repeat icons created by Uniconlabs - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/music"             title="music Icons"             target="Referenz">Music icons created by abdanbagus - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/left"              title="left Icons"              target="Referenz">Left icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/folder"            title="folder Icons"            target="Referenz">Folder icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/random"            title="random Icons"            target="Referenz">Random icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/google-play-music" title="google play music Icons" target="Referenz">Google play music icons created by Pixel perfect - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/youtube"           title="youtube Icons"           target="Referenz">Youtube icons created by Freepik - Flaticon</a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- FileManager -->
+            <div class="item software" id="filemanager">
+                <div class="title" onclick="openClose('filemanager')">
+                    <div class="label"><p>File Manager</p></div>
+                    <span class="plus"></span>
+                    <span class="minus"></span>
+                </div>
+
+                <div class="description">
+                    <p>
+                        <a href="https://www.flaticon.com/free-icons/folder"     title="folder Icons"     target="Referenz">Folder icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/modify"     title="modify Icons"     target="Referenz">Modify icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/search"     title="search Icons"     target="Referenz">Search icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/paper"      title="paper Icons"      target="Referenz">Paper icons created by Neveraemje - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/comparison" title="comparison Icons" target="Referenz">Comparison icons created by rddrt - Flaticon</a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- VacuumCleanerSimulator -->
+            <div class="item games" id="vacuumcleanersimulator">
+                <div class="title" onclick="openClose('vacuumcleanersimulator')">
+                    <div class="label"><p>Vacuum Cleaner Simulator</p></div>
+                    <span class="plus"></span>
+                    <span class="minus"></span>
+                </div>
+
+                <div class="description">
+                    <p>
+                        <a href="https://www.flaticon.com/free-icons/poo"    title="poo Icons"                  target="Referenz">Poo icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/dirt"   title="dirt Icons"                 target="Referenz">Dirt icons created by Vitaly Gorbachev - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/stain"  title="stain Icons"                target="Referenz">Stain icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/dirty"  title="dirty Icons"                target="Referenz">Dirty icons created by DinosoftLabs - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/stain"  title="stain Icons"                target="Referenz">Stain icons created by Vitaly Gorbachev - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/stain"  title="stain Icons"                target="Referenz">Stain icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/trash"  title="trash Icons"                target="Referenz">Trash icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/sign"   title="sign Icons"                 target="Referenz">Sign icons created by Kiranshastry - Flaticon</a>
+                        <a href="https://pixabay.com/de/images/search/floor" title="backgrounds"                target="Referenz">Background graphics - pixabay</a>
+                        <a href="https://www.musicfox.com"                   title="musicfox - gemafreie Musik" target="Referenz">Gemafreie Musik von musicfox</a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- WarAndPeace -->
+            <div class="item games" id="warandpeace">
+                <div class="title" onclick="openClose('warandpeace')">
+                    <div class="label"><p>War And Peace</p></div>
+                    <span class="plus"></span>
+                    <span class="minus"></span>
+                </div>
+
+                <div class="description">
+                    <p>
+                        <a href="https://www.flaticon.com/free-icons/peace" title="peace Icons"                target="Referenz">Peace icons created by Freepik - Flaticon</a>
+                        <a href="https://pixabay.com/de/images/search/skat" title="cards"                      target="Referenz">Cards graphics - pixabay</a>
+                        <a href="https://www.musicfox.com"                  title="musicfox - gemafreie Musik" target="Referenz">Gemafreie Musik von musicfox</a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Pong -->
+            <div class="item games" id="pong">
+                <div class="title" onclick="openClose('pong')">
+                    <div class="label"><p>Pong</p></div>
+                    <span class="plus"></span>
+                    <span class="minus"></span>
+                </div>
+
+                <div class="description">
+                    <p>
+                        <a href="https://www.flaticon.com/free-icons/ping-pong"         title="ping pong Icons"             target="Referenz">Ping pong icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/bigger"            title="bigger Icons"                target="Referenz">Bigger icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/eye"               title="eye Icons"                   target="Referenz">Eye icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/freeze"            title="freeze Icons"                target="Referenz">Freeze icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/slow"              title="slow Icons"                  target="Referenz">Slow icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/de/kostenlose-icons/schnell"  title="schnell Icons"               target="Referenz">Schnell Icons erstellt von Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/information"       title="information Icons"           target="Referenz">Information icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/settings"          title="settings Icons"              target="Referenz">Settings icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/videogame"         title="videogame Icons"             target="Referenz">Videogame icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/music"             title="music Icons"                 target="Referenz">Music icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/circle"            title="circle Icons"                target="Referenz">Circle icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/shapes"            title="shapes Icons"                target="Referenz">Shapes icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/back"              title="back Icons"                  target="Referenz">Back icons created by Freepik - Flaticon</a>
+                        <a href="https://www.musicfox.com"                              title="musicfox - gemafreie Musik"  target="Referenz">Gemafreie Musik von musicfox</a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- RockPaperScissors -->
+            <div class="item games" id="rockpaperscissors">
+                <div class="title" onclick="openClose('rockpaperscissors')">
+                    <div class="label"><p>Rock Paper Scissors</p></div>
+                    <span class="plus"></span>
+                    <span class="minus"></span>
+                </div>
+
+                <div class="description">
+                    <p>
+                        <a href="https://www.flaticon.com/free-icons/rock"                title="rock Icons"                target="Referenz">Rock icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/paper"               title="paper Icons"               target="Referenz">Paper icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/scissors"            title="scissors Icons"            target="Referenz">Scissors icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/well"                title="well Icons"                target="Referenz">Well icons created by Icongeek26 - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/rock-paper-scissors" title="rock paper scissors Icons" target="Referenz">Rock paper scissors icons created by Freepik - Flaticon</a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Yahtzee -->
+            <div class="item games" id="yahtzee">
+                <div class="title" onclick="openClose('yahtzee')">
+                    <div class="label"><p>Yahtzee</p></div>
+                    <span class="plus"></span>
+                    <span class="minus"></span>
+                </div>
+
+                <div class="description">
+                    <p>
+                        <a href="https://www.flaticon.com/free-icons/dice" title="dice Icons"                 target="Referenz">Dice icons created by IYIKON - Flaticon</a>
+                        <a href="https://www.musicfox.com"                 title="musicfox - gemafreie Musik" target="Referenz">Gemafreie Musik von musicfox</a>    
+                    </p>
+                </div>
+            </div>
+
+            <!-- DestroyTheNumbers -->
+            <div class="item games" id="destroythenumbers">
+                <div class="title" onclick="openClose('destroythenumbers')">
+                    <div class="label"><p>Destroy The Numbers</p></div>
+                    <span class="plus"></span>
+                    <span class="minus"></span>
+                </div>
+
+                <div class="description">
+                    <p>
+                        <a href="https://www.flaticon.com/de/kostenlose-icons/neu"  title="neu Icons"                   target="Referenz">Neu Icons erstellt von Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/pause"         title="pause Icons"                 target="Referenz">Pause icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/information"   title="information Icons"           target="Referenz">Information icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/column"        title="column Icons"                target="Referenz">Column icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/circle"        title="circle Icons"                target="Referenz">Circle icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/videogame"     title="videogame Icons"             target="Referenz">Videogame icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/music"         title="music Icons"                 target="Referenz">Music icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/loop"          title="loop Icons"                  target="Referenz">Loop icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/shop"          title="shop Icons"                  target="Referenz">Shop icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/back"          title="back Icons"                  target="Referenz">Back icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/hammer"        title="hammer Icons"                target="Referenz">Hammer icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/clean"         title="clean Icons"                 target="Referenz">Clean icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/eye"           title="eye Icons"                   target="Referenz">Eye icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/numbers"       title="numbers Icons"               target="Referenz">Numbers icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/coin"          title="coin Icons"                  target="Referenz">Coin icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/crown"         title="crown Icons"                 target="Referenz">Crown icons created by Freepik - Flaticon</a>
+                        <a href="https://www.musicfox.com"                          title="musicfox - gemafreie Musik"  target="Referenz">Gemafreie Musik von musicfox</a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- TrainYourBrain -->
+            <div class="item games" id="trainyourbrain">
+                <div class="title" onclick="openClose('trainyourbrain')">
+                    <div class="label"><p>Train Your Brain</p></div>
+                    <span class="plus"></span>
+                    <span class="minus"></span>
+                </div>
+
+                <div class="description">
+                    <p>
+                        <a href="https://www.flaticon.com/free-icons/coin"          title="coin Icons"                 target="Referenz">Coin icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/de/kostenlose-icons/star" title="star Icons"                 target="Referenz">Star Icons erstellt von Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/boat"          title="boat Icons"                 target="Referenz">Boat icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/number-one"    title="number one Icons"           target="Referenz">Number one icons created by Hight Quality Icons - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/two"           title="two Icons"                  target="Referenz">Two icons created by Hight Quality Icons - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/three"         title="three Icons"                target="Referenz">Three icons created by Hight Quality Icons - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/4"             title="4 Icons"                    target="Referenz">4 icons created by Hight Quality Icons - Flaticon</a>
+                        <a href="https://www.musicfox.com"                          title="musicfox - gemafreie Musik" target="Referenz">Gemafreie Musik von musicfox</a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- TicTacToe -->
+            <div class="item games" id="tic-tac-toe">
+                <div class="title" onclick="openClose('tic-tac-toe')">
+                    <div class="label"><p>Tic-Tac-Toe</p></div>
+                    <span class="plus"></span>
+                    <span class="minus"></span>
+                </div>
+
+                <div class="description">
+                    <p>
+                        <a href="https://www.flaticon.com/free-icons/tic-tac-toe" title="tic tac toe Icons" target="Referenz">Tic tac toe icons created by Freepik - Flaticon</a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- GameOfLife -->
+            <div class="item games" id="gameOflife">
+                <div class="title" onclick="openClose('gameOflife')">
+                    <div class="label"><p>Game Of Life</p></div>
+                    <span class="plus"></span>
+                    <span class="minus"></span>
+                </div>
+
+                <div class="description">
+                    <p>
+                        <a href="https://www.flaticon.com/free-icons/plus"  title="plus Icons"                 target="Referenz">Plus icons created by Vectors Market - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/minus" title="minus Icons"                target="Referenz">Minus icons created by Vectors Market - Flaticon</a>
+                        <a href="https://www.musicfox.com"                  title="musicfox - gemafreie Musik" target="Referenz">Gemafreie Musik von musicfox</a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Clock -->
+            <div class="item software" id="clock">
+                <div class="title" onclick="openClose('clock')">
+                    <div class="label"><p>Clock</p></div>
+                    <span class="plus"></span>
+                    <span class="minus"></span>
+                </div>
+
+                <div class="description">
+                    <p>
+                        <a href="https://www.flaticon.com/de/kostenlose-icons/wecker"   title="wecker Icons"  target="Referenz">Wecker Icons erstellt von Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/de/kostenlose-icons/zeit"     title="zeit Icons"    target="Referenz">Zeit Icons erstellt von Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/timer"             title="timer Icons"   target="Referenz">Timer icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/clock"             title="clock Icons"   target="Referenz">Clock icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/export"            title="export Icons"  target="Referenz">Export icons created by Chanut - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/import"            title="import Icons"  target="Referenz">Import icons created by Chanut - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/trash"             title="trash Icons"   target="Referenz">Trash icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/send"              title="send Icons"    target="Referenz">Send icons created by Pixel perfect - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/next"              title="next Icons"    target="Referenz">Next icons created by Smashicons - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/calm"              title="calm Icons"    target="Referenz">Calm icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/play"              title="play Icons"    target="Referenz">Play icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/stop"              title="stop Icons"    target="Referenz">Stop icons created by Freepik - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/speaker"           title="speaker Icons" target="Referenz">Speaker icons created by Freepik - Flaticon</a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Counter -->
+            <div class="item software" id="counter">
+                <div class="title" onclick="openClose('counter')">
+                    <div class="label"><p>Counter</p></div>
+                    <span class="plus"></span>
+                    <span class="minus"></span>
+                </div>
+
+                <div class="description">
+                    <p>
+                        <a href="https://www.flaticon.com/free-icons/plus" title="plus Icons" target="Referenz">Plus icons created by Freepik - Flaticon</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <div class="card" id="footer">
+        <div id="footercontent">
+            <div id="links">
+                <a href="imprint.html">Impressum</a>
+                <div id="youtube">
+                    <img src="graphics/youtube.png" alt="Logo YouTube" width="45px" height="45px">
+                    <a href="https://www.youtube.com/channel/UC44FC65CoOuQpyx6BkdPasA">CodeEagle</a>
+                </div>
+                <div id="instagram">
+                    <img src="graphics/instagram.png" alt="Logo Instagram" width="40px" height="40px">
+                    <a href="https://www.instagram.com/_codeeagle_/">_codeeagle_</a>
+                </div>
+            </div>
+            <div id="text">
+                <p>Copyright &copy; 2022 <span>Julian Lamm</span></p>
+                <p>Webseite zuletzt aktualisiert am: <span>07.09.2022</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="javascript/search.js"></script>
+    <script src="javascript/openCloseCard.js"></script>
+    <script src="javascript/backgroundAnimation.js"></script>
+    <script src="javascript/transitionsAction.js"></script>
+    <script src="javascript/toggleButtonAction.js"></script> <!-- open-menu-button animation when the button will be clicked -->
+</body>
+</html>

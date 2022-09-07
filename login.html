@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!-- @version 1-0-0 -->
+
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="author" content="Julian Lamm"/>
+    
+    <link href="css/mainStyle.css" rel="stylesheet">
+    <link href="css/loginStyle.css" rel="stylesheet">
+
+    <link href="graphics/logo.png" rel="shortcut icon">
+    <title>CodeEagle - Login</title>
+</head>
+
+<body>
+    <noscript> <!-- JavaScript is disabled - error page will be loaded -->
+        <META HTTP-EQUIV="Refresh" CONTENT="0;URL=noJavaScript.html">
+    </noscript>
+
+    <!-- CONTENT -->
+    <section id="content">
+        <!-- BACKGROUND PARTICLES -->
+        <div class="background">
+            <div class="glowing">
+                <span style="--i:1;"></span>
+                <span style="--i:2;"></span>
+                <span style="--i:3;"></span>
+            </div>
+    
+            <div class="glowing">
+                <span style="--i:1;"></span>
+                <span style="--i:2;"></span>
+                <span style="--i:3;"></span>
+            </div>
+    
+            <div class="glowing">
+                <span style="--i:1;"></span>
+                <span style="--i:2;"></span>
+                <span style="--i:3;"></span>
+            </div>
+    
+            <div class="glowing">
+                <span style="--i:1;"></span>
+                <span style="--i:2;"></span>
+                <span style="--i:3;"></span>
+            </div>
+        </div>
+
+        <!-- CONTACT CARD -->
+        <div class="card">
+            <h1>Login</h1> <!-- title -->
+
+            <div class="image"> <!-- image -->
+                <img src="graphics/user.png" alt="Benutzer Bild" width=120px>
+            </div>
+
+            <form autocomplete="off"> <!-- no autocomplete by the browser -->
+                <div class="inputBox"> <!-- USERNAME -->
+                    <input id="username" type="text" name="" required="required">
+                    <span class="text">Benutzername</span>
+                    <span class="line"></span>
+                </div>
+
+                <div class="inputBox"> <!-- PASSWORD -->
+                    <input id="password" type="password" name="" required="required">
+                    <span class="text">Passwort</span>
+                    <img src="graphics/visible.png" alt="visible" width="35px" id="visible" onclick="showPassword();">
+                    <img src="graphics/notVisible.png" alt="not visible" width="35px" id="notVisible" onclick="showPassword();">
+                    <span class="line"></span>
+                </div>
+            </form>
+
+            <!-- login-button -->
+            <input type="submit" value="Anmelden" onclick="login();">
+
+            <p id="error"></p> <!-- show error message -->
+        </div>
+    </section>
+
+    <script src="javascript/loginAction.js"></script>
+</body>
+</html>

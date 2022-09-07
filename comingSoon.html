@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!-- @version 1-0-0 -->
+ 
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     
+    <meta name="author" content="Julian Lamm"/>
+     
+    <link href="css/mainStyle.css" rel="stylesheet">
+    <link href="css/transitions.css" rel="stylesheet">
+    <link href="css/backgroundStyle.css" rel="stylesheet">
+    <link href="css/comingSoonStyle.css" rel="stylesheet">
+     
+    <link href="graphics/logo.png" rel="shortcut icon">
+    <title>CodeEagle - Demnächst</title>
+</head>
+ 
+<body>
+    <noscript> <!-- JavaScript is disabled - error page will be loaded -->
+        <META HTTP-EQUIV="Refresh" CONTENT="0;URL=noJavaScript.html">
+    </noscript>
+ 
+    <!-- PAGE TRANSITION -->
+    <div class="transition transition-3 is-active"></div>
+ 
+    <!-- NAVIGATION BAR -->
+    <nav class="card">
+        <div id="navbarContent">
+            <!-- LOGO -->
+            <div id="logo">
+                <a id="companyName" href="index.html">CodeEagle</a>
+                <img src="graphics/logo.png" alt="Logo Adler" width="55px" height="45px">
+            </div>
+ 
+            <!-- BUTTON TO OPEN THE NAVIGATION BAR (for smaller devices) -->
+            <input type="checkbox" id="toggle_button">
+                <label for="toggle_button" class="toggle_button">
+                    <span></span> <!-- lines -->
+                    <span></span>
+                    <span></span>
+                </label>
+             
+            <!-- ELEMENTS OF THE NAVIGATION BAR -->
+            <ul>
+                <li id="active"><a href="comingSoon.html">Demnächst</a></li>
+                <li><a href="download.html">Downloads</a></li>
+                <li><a href="changelog.html">Änderungen</a></li>
+                <li><a href="credits.html">Referenz</a></li>
+                <li><a href="aboutMe.html">Über mich</a></li>
+            </ul>
+        </div>
+    </nav>
+ 
+    <!-- CONTENT -->
+    <section id="content">
+        <!-- BACKGROUND ANIMATION -->
+        <div id="background"></div>
+        
+        <div class="card">
+            <div class="left">
+                <h1>Webseite</h1> <!-- title, subtitle and text -->
+                <h2>Demnächst verfügbar!</h2><br>
+                <p>Diese Internetseite wird komplett überarbeitet.</p>
+
+                <div class="countdown"> <!-- boxes -->
+                    <div class="above">
+                        <div class="time"><p id="day"></p><span>Tage</span></div>
+                        <div class="time"><p id="hour"></p><span>Stunden</span></div>
+                    </div>
+                    <div class="below">
+                        <div class="time"><p id="minute"></p><span>Minuten</span></div>
+                        <div class="time"><p id="second"></p><span>Sekunden</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image"> <!-- image -->
+                <img src="graphics/worker.png" alt="Arbeiter" width=450px>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- FOOTER -->
+    <div class="card" id="footer">
+        <div id="footercontent">
+            <div id="links">
+                <a href="imprint.html">Impressum</a>
+                <div id="youtube">
+                    <img src="graphics/youtube.png" alt="Logo YouTube" width="45px" height="45px">
+                    <a href="https://www.youtube.com/channel/UC44FC65CoOuQpyx6BkdPasA">CodeEagle</a>
+                </div>
+                <div id="instagram">
+                    <img src="graphics/instagram.png" alt="Logo Instagram" width="40px" height="40px">
+                    <a href="https://www.instagram.com/_codeeagle_/">_codeeagle_</a>
+                </div>
+            </div>
+            <div id="text">
+                <p>Copyright &copy; 2022 <span>Julian Lamm</span></p>
+                <p>Webseite zuletzt aktualisiert am: <span>07.09.2022</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="javascript/comingSoonAction.js"></script>
+    <script src="javascript/backgroundAnimation.js"></script>
+    <script src="javascript/transitionsAction.js"></script>
+    <script src="javascript/toggleButtonAction.js"></script> <!-- open-menu-button animation when the button will be clicked -->
+</body>
+</html>

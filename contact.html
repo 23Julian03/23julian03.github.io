@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!-- @version 1-0-0 -->
+
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="author" content="Julian Lamm"/>
+    
+    <link href="css/mainStyle.css" rel="stylesheet">
+    <link href="css/contactStyle.css" rel="stylesheet">
+        
+    <link href="graphics/logo.png" rel="shortcut icon">
+    <title>CodeEagle - Kontakt</title>
+</head>
+
+<body>
+    <noscript> <!-- JavaScript is disabled - error page will be loaded -->
+        <META HTTP-EQUIV="Refresh" CONTENT="0;URL=noJavaScript.html">
+    </noscript>
+
+    <!-- CONTENT -->
+    <section id="content">
+        <!-- BACKGROUND PARTICLES -->
+        <div class="background">
+            <div class="glowing">
+                <span style="--i:1;"></span>
+                <span style="--i:2;"></span>
+                <span style="--i:3;"></span>
+            </div>
+    
+            <div class="glowing">
+                <span style="--i:1;"></span>
+                <span style="--i:2;"></span>
+                <span style="--i:3;"></span>
+            </div>
+    
+            <div class="glowing">
+                <span style="--i:1;"></span>
+                <span style="--i:2;"></span>
+                <span style="--i:3;"></span>
+            </div>
+    
+            <div class="glowing">
+                <span style="--i:1;"></span>
+                <span style="--i:2;"></span>
+                <span style="--i:3;"></span>
+            </div>
+        </div>
+
+        <!-- CONTACT CARD -->
+        <div class="card">
+            <h1>Kontakt</h1> <!-- title -->
+
+            <!-- ROW 1 -->
+            <div class="row">
+                <div class="column"> <!-- NAME -->
+                    <div class="inputBox">
+                        <input id="name" type="text" name="" required="required" autocomplete="off">
+                        <span class="text">Name</span>
+                        <span class="line"></span>
+                    </div>
+                </div>
+
+                <div class="column"> <!-- BETREFF -->
+                    <div class="inputBox">
+                        <input id="subject" type="text" name="" required="required" autocomplete="off">
+                        <span class="text">Betreff</span>
+                        <span class="line"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ROW 2 -->
+            <div class="row">
+                <div class="column"> <!-- SOFTWARENAME -->
+                    <div class="inputBox">
+                        <input id="softwareName" type="text" name="" required="required" autocomplete="off">
+                        <span class="text">Software Name</span>
+                        <span class="line"></span>
+                    </div>
+                </div>
+
+                <div class="column"> <!-- SOFTWAREVERSION -->
+                    <div class="inputBox">
+                        <input id="softwareVersion" type="text" name="" required="required" autocomplete="off">
+                        <span class="text">Software Version</span>
+                        <span class="line"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ROW 3 -->
+            <div class="row">
+                <div class="column"> <!-- MESSAGE -->
+                    <div class="inputBox textarea">
+                        <textarea id="message" required="required" maxlength="260" onkeyup="countLetters();"></textarea>
+                        <span class="text">Ihre Nachricht ...</span>
+                        <span class="line"></span>
+                    </div>
+                </div>
+            </div>
+
+            <p>Anzahl Zeichen : <span class="count">0 / 260</span></p> <!-- number of letters in the message -->
+
+            <!-- ROW 4 -->
+            <div class="row">
+                <div class="column"> <!-- SEND-BUTTON -->
+                    <input type="submit" value="Senden" onclick="tryToSend();">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="javascript/contactAction.js"></script>
+</body>
+</html>

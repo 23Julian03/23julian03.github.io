@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<!-- @version 1-0-0 -->
+
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="author" content="Julian Lamm"/>
+    
+    <link href="css/mainStyle.css" rel="stylesheet">
+    <link href="css/transitions.css" rel="stylesheet">
+    <link href="css/changelogStyle.css" rel="stylesheet">
+    <link href="css/backgroundStyle.css" rel="stylesheet">
+    <link href="css/itemStyle.css" rel="stylesheet">
+    <link href="css/searchStyle.css" rel="stylesheet">
+
+    <link href="graphics/logo.png" rel="shortcut icon">
+    <title>CodeEagle - Änderungen</title>
+</head>
+
+<body>
+    <noscript> <!-- JavaScript is disabled - error page will be loaded -->
+        <META HTTP-EQUIV="Refresh" CONTENT="0;URL=noJavaScript.html">
+    </noscript>
+
+    <!-- PAGE TRANSITION -->
+    <div class="transition transition-3 is-active"></div>
+
+    <!-- NAVIGATION BAR -->
+    <nav class="card">
+        <div id="navbarContent">
+            <!-- LOGO -->
+            <div id="logo">
+                <a id="companyName" href="index.html">CodeEagle</a>
+                <img src="graphics/logo.png" alt="Logo Adler" width="55px" height="45px">
+            </div>
+
+            <!-- BUTTON TO OPEN THE NAVIGATION BAR (for smaller devices) -->
+            <input type="checkbox" id="toggle_button">
+                <label for="toggle_button" class="toggle_button">
+                    <span></span> <!-- lines -->
+                    <span></span>
+                    <span></span>
+                </label>
+            
+            <!-- ELEMENTS OF THE NAVIGATION BAR -->
+            <ul>
+                <li><a href="comingSoon.html">Demnächst</a></li>
+                <li><a href="download.html">Downloads</a></li>
+                <li id="active"><a href="changelog.html">Änderungen</a></li>
+                <li><a href="credits.html">Referenz</a></li>
+                <li><a href="aboutMe.html">Über mich</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- CONTENT -->
+    <section id="content">
+        <!-- BACKGROUND ANIMATION -->
+        <div id="background"></div>
+
+        <div class="card">
+            <!-- SEARCH -->
+            <div class="search">
+                <div class="icon"></div>
+                <div class="input">
+                    <input type="text" onkeyup="doSearch()" autocomplete="off" maxlength="10" id="mySearch" placeholder="Suchen ...">
+                </div>
+                <span class="clear" onclick="document.getElementById('mySearch').value = ''; doSearch();"></span>
+            </div>
+
+            <!-- FILTER -->
+            <div class="card filter">
+                <button class="btn activated" onclick="filterSelection('')">Alles</button>
+                <button class="btn centerButton" onclick="filterSelection('software')">Software</button>
+                <button class="btn" onclick="filterSelection('games')">Games</button>
+            </div>
+
+            <!-- CHANGELOGS -->
+            <!-- Webseite -->
+            <div class="item" id="webseite">
+                <div class="title" onclick="openClose('webseite')">
+                    <div class="label"><p>Webseite</p>
+                    <span class="new"><img src="graphics/new.png" alt="new"></span></div>
+                    <span class="plus"></span>
+                    <span class="minus"></span>
+                </div>
+
+                <div class="description">
+                    <p>
+                        <b>-- Version 2.0.0 [01.09.2022] --</b><br>
+                        Ankündigungen und Referenzen hinzugefügt, neues Design, Animationen, Code / Performance Optimierungen, Bug fixes
+                        <br><br><b>-- Version 1.0.0 [18.12.2021] --</b><br>
+                        Release
+                    </p>
+                </div>
+            </div>
+
+            <!-- TowerOfHanoi -->
+            <div class="item games" id="towerofhanoi">
+                <div class="title" onclick="openClose('towerofhanoi')">
+                    <div class="label"><p>Tower Of Hanoi</p>
+                    <span class="new"><img src="graphics/new.png" alt="new"></span></div>
+                    <span class="plus"></span>
+                    <span class="minus"></span>
+                </div>
+
+                <div class="description">
+                    <p>
+                        <b>[FINALE VERSION]</b><br>
+                        <b>-- Version 1.0.0 [11.03.2022] --</b><br>
+                        Release
+                    </p>
+                </div>
+            </div>
+
+            <!--  ShutdownManager -->
+            <div class="item software" id="shutdownmanager">
+                <div class="title" onclick="openClose('shutdownmanager')">
+                    <div class="label"><p>Shutdown Manager</p></div>
+                    <span class="plus"></span>
+                    <span class="minus"></span>
+                </div>
+
+                <div class="description">
+                    <p>
+                        <b>[FINALE VERSION]</b><br>
+                        <b>-- Version 3.0.0 [22.08.2022] --</b><br>
+                        Code / Performance Optimierungen, Funktion entfernt: Information anzeigen, Herunterfahren und Neustarten nun 
+                        möglich, direkt oder nach zu bestimmender Zeit
+                        <br><br><b>-- Version 2.0.0 [11.03.2022] --</b><br>
+                        Code / Performance Optimierungen, neues Design, Bug fixes
+                        <br><br><b>-- Version 1.0.0 [28.11.2021] --</b><br>
+                        Release
+                    </p>
+                </div>
+            </div>
+
+            <!-- OneSound-MP -->
+            <div class="item software" id="onesound-mp">
+                <div class="title" onclick="openClose('onesound-mp')">
+                    <div class="label"><p>OneSound-MP</p></div>
+                    <span class="plus"></span>
+                    <span class="minus"></span>
+                </div>
+
+                <div class="description">
+                    <p>
+                        <b>[FINALE VERSION]</b><br>
+                        <b>-- Version 3.2.0 [18.03.2022] --</b><br>
+                        Bug fixes
+                        <br><br><b>-- Version 3.1.0 [13.03.2022] --</b><br>
+                        Bug fixes, Performance Optimierungen
+                        <br><br><b>-- Version 3.0.0 [11.03.2022] --</b><br>
+                        Code / Performance Optimierungen, neues Design, Bug fixes
+                        <br><br><b>-- Version 2.0.0 [11.11.2021] --</b><br>
+                        Code / Performance Optimierungen
+                        <br><br><b>-- Version 1.0.0 [14.10.2021] --</b><br>
+                        Release
+                    </p>
+                </div>
+            </div>
+
+            <!-- FileManager -->
+            <div class="item software" id="filemanager">
+                <div class="title" onclick="openClose('filemanager')">
+                    <div class="label"><p>File Manager</p></div>
+                    <span class="plus"></span>
+                    <span class="minus"></span>
+                </div>
+
+                <div class="description">
+                    <p>
+                        <b>[FINALE VERSION]</b><br>
+                        <b>-- Version 2.1.0 [14.03.2022] --</b><br>
+                        Bug fixes
+                        <br><br><b>-- Version 2.0.0 [11.03.2022] --</b><br>
+                        Code / Performance Optimierungen, neues Design, Bug fixes
+                        <br><br><b>-- Version 1.1.2 [27.08.2021] --</b><br>
+                        Neue Funktionen wurden hinzugefügt
+                        <br><br><b>-- Version 1.1.1 [21.08.2021] --</b><br>
+                        Neue Einstellungsmöglichkeiten wurden hinzugefügt
+                        <br><br><b>-- Version 1.1.0 [09.08.2021] --</b><br>
+                        Filterseinstellung Erweiterung, Bug fixes
+                        <br><br><b>-- Version 1.0.0 [02.08.2021] --</b><br>
+                        Release
+                    </p>
+                </div>
+            </div>
+
+            <!-- VacuumCleanerSimulator -->
+            <div class="item games" id="vacuumcleanersimulator">
+                <div class="title" onclick="openClose('vacuumcleanersimulator')">
+                    <div class="label"><p>Vacuum Cleaner Simulator</p></div>
+                    <span class="plus"></span>
+                    <span class="minus"></span>
+                </div>
+
+                <div class="description">
+                    <p>
+                        <b>[FINALE VERSION]</b><br>
+                        <b>-- Version 2.0.0 [11.03.2022] --</b><br>
+                        Code / Performance Optimierungen, neues Design, Bug fixes
+                        <br><br><b>-- Version 1.1.0 [22.05.2021] --</b><br>
+                        Neue Einstellungsmöglichkeiten, Bug fixes
+                        <br><br><b>-- Version 1.0.0 [19.05.2021] --</b><br>
+                        Release
+                    </p>
+                </div>
+            </div>
+            
+            <!-- WarAndPeace -->
+            <div class="item games" id="warandpeace">
+                <div class="title" onclick="openClose('warandpeace')">
+                    <div class="label"><p>War And Peace</p></div>
+                    <span class="plus"></span>
+                    <span class="minus"></span>
+                </div>
+
+                <div class="description">
+                    <p>
+                        <b>[FINALE VERSION]</b><br>
+                        <b>-- Version 2.0.0 [11.03.2022] --</b><br>
+                        Code / Performance Optimierungen, neues Design, Bug fixes
+                        <br><br><b>-- Version 1.1.0 [20.05.2021] --</b><br>
+                        Neues Design
+                        <br><br><b>-- Version 1.0.0 [17.04.2021] --</b><br>
+                        Release
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Pong -->
+            <div class="item games" id="pong">
+                <div class="title" onclick="openClose('pong')">
+                    <div class="label"><p>Pong</p></div>
+                    <span class="plus"></span>
+                    <span class="minus"></span>
+                </div>
+
+                <div class="description">
+                    <p>
+                        <b>[FINALE VERSION]</b><br>
+                        <b>-- Version 2.0.0 [11.03.2022] --</b><br>
+                        Code / Performance Optimierungen, neues Design, Bug fixes
+                        <br><br><b>-- Version 1.3.0 [02.04.2021] --</b><br>
+                        Zwei neue Spielmodi mit verschiedenen Items, neue Einstellungen, Bug fixes
+                        <br><br><b>-- Version 1.2.0 [25.03.2021] --</b><br>
+                        Neue Einstellungsmöglichkeiten
+                        <br><br><b>-- Version 1.1.0 [23.03.2021] --</b><br>
+                        Einzelspielermodus wurde hinzugefügt
+                        <br><br><b>-- Version 1.0.0 [18.03.2021] --</b><br>
+                        Release
+                    </p>
+                </div>
+            </div>
+            
+            <!-- RockPaperScissors -->
+            <div class="item games" id="rockpaperscissors">
+                <div class="title" onclick="openClose('rockpaperscissors')">
+                    <div class="label"><p>Rock Paper Scissors</p></div>
+                    <span class="plus"></span>
+                    <span class="minus"></span>
+                </div>
+
+                <div class="description">
+                    <p>
+                        <b>[FINALE VERSION]</b><br>
+                        <b>-- Version 2.0.0 [11.03.2022] --</b><br>
+                        Code / Performance Optimierungen, neues Design, Bug fixes
+                        <br><br><b>-- Version 1.0.0 [09.03.2021] --</b><br>
+                        Release
+                    </p>
+                </div>
+            </div>
+
+            <!-- Yahtzee -->
+            <div class="item games" id="yahtzee">
+                <div class="title" onclick="openClose('yahtzee')">
+                    <div class="label"><p>Yahtzee</p></div>
+                    <span class="plus"></span>
+                    <span class="minus"></span>
+                </div>
+
+                <div class="description">
+                    <p>
+                        <b>[FINALE VERSION]</b><br>
+                        <b>-- Version 3.0.0 [11.03.2022] --</b><br>
+                        Code / Performance Optimierungen, neues Design, Bug fixes
+                        <br><br><b>-- Version 2.0.0 [08.07.2021] --</b><br>
+                        Neue Einstellungen, Bug fixes
+                        <br><br><b>-- Version 1.2.0 [03.01.2021] --</b><br>
+                        Neue Einstellungsmöglichkeiten
+                        <br><br><b>-- Version 1.0.0 [09.12.2020] --</b><br>
+                        Release
+                    </p>
+                </div>
+            </div>
+
+            <!-- DestroyTheNumbers -->
+            <div class="item games" id="destroythenumbers">
+                <div class="title" onclick="openClose('destroythenumbers')">
+                    <div class="label"><p>Destroy The Numbers</p></div>
+                    <span class="plus"></span>
+                    <span class="minus"></span>
+                </div>
+
+                <div class="description">
+                    <p>
+                        <b>[FINALE VERSION]</b><br>
+                        <b>-- Version 2.0.0 [11.03.2022] --</b><br>
+                        Code / Performance Optimierungen, neues Design, Bug fixes
+                        <br><br><b>-- Version 1.1.0 [08.12.2020] --</b><br>
+                        Items mit einem Kaufsystem wurden hinzugefügt
+                        <br><br><b>-- Version 1.0.0 [22.11.2020] --</b><br>
+                        Release
+                    </p>
+                </div>
+            </div>
+
+            <!-- TrainYourBrain -->
+            <div class="item games" id="trainyourbrain">
+                <div class="title" onclick="openClose('trainyourbrain')">
+                    <div class="label"><p>Train Your Brain</p></div>
+                    <span class="plus"></span>
+                    <span class="minus"></span>
+                </div>
+
+                <div class="description">
+                    <p>
+                        <b>-- Version 2.1.0 [12.03.2022] --</b><br>
+                        Bug fixes
+                        <br><br><b>-- Version 2.0.0 [11.03.2022] --</b><br>
+                        Code / Performance Optimierungen, neues Design, Bug fixes
+                        <br><br><b>-- Version 1.4.0 [01.11.2020] --</b><br>
+                        Neues Level wurde hinzugefügt
+                        <br><br><b>-- Version 1.0.0 [14.09.2020] --</b><br>
+                        Release
+                    </p>
+                </div>
+            </div>
+
+            <!-- TicTacToe -->
+            <div class="item games" id="tic-tac-toe">
+                <div class="title" onclick="openClose('tic-tac-toe')">
+                    <div class="label"><p>Tic-Tac-Toe</p></div>
+                    <span class="plus"></span>
+                    <span class="minus"></span>
+                </div>
+
+                <div class="description">
+                    <p>
+                        <b>[FINALE VERSION]</b><br>
+                        <b>-- Version 3.0.0 [11.03.2022] --</b><br>
+                        Code / Performance Optimierungen, neues Design, Bug fixes
+                        <br><br><b>-- Version 2.0.0 [08.07.2021] --</b><br>
+                        schlauerer NPC, Code / Performance Optimierungen, Bug fixes
+                        <br><br><b>-- Version 1.7.0 [08.10.2020] --</b><br>
+                        Einzelspielermodus wurde hinzugefügt
+                        <br><br><b>-- Version 1.0.0 [11.08.2020] --</b><br>
+                        Release
+                    </p>
+                </div>
+            </div>
+
+            <!-- GameOfLife -->
+            <div class="item games" id="gameOflife">
+                <div class="title" onclick="openClose('gameOflife')">
+                    <div class="label"><p>Game Of Life</p></div>
+                    <span class="plus"></span>
+                    <span class="minus"></span>
+                </div>
+
+                <div class="description">
+                    <p>
+                        <b>[FINALE VERSION]</b><br>
+                        <b>-- Version 5.0.0 [11.03.2022] --</b><br>
+                        Code / Performance Optimierungen, neues Design, Bug fixes
+                        <br><br><b>-- Version 4.0.0 [22.08.2021] --</b><br>
+                        Eigene Konstellationen können dauerhaft gespeichert werden
+                        <br><br><b>-- Version 3.0.0 [15.04.2021] --</b><br>
+                        Bug fixes
+                        <br><br><b>-- Version 2.0.0 [11.09.2020] --</b><br>
+                        Neues Design
+                        <br><br><b>-- Version 1.0.0 [10.08.2020] --</b><br>
+                        Release
+                    </p>
+                </div>
+            </div>
+
+            <!-- Clock -->
+            <div class="item software" id="clock">
+                <div class="title" onclick="openClose('clock')">
+                    <div class="label"><p>Clock</p></div>
+                    <span class="plus"></span>
+                    <span class="minus"></span>
+                </div>
+
+                <div class="description">
+                    <p>
+                        <b>[FINALE VERSION]</b><br>
+                        <b>-- Version 4.0.0 [11.03.2022] --</b><br>
+                        Code / Performance Optimierungen, neues Design, Bug fixes
+                        <br><br><b>-- Version 3.0.4 [11.07.2021] --</b><br>
+                        Neue Funktion: eigener Sound kann eingebunden werden
+                        <br><br><b>-- Version 2.0.0 [03.04.2021] --</b><br>
+                        Neues Design
+                        <br><br><b>-- Version 1.0.0 [10.08.2020] --</b><br>
+                        Release
+                    </p>
+                </div>
+            </div>
+
+            <!-- Counter -->
+            <div class="item software" id="counter">
+                <div class="title" onclick="openClose('counter')">
+                    <div class="label"><p>Counter</p></div>
+                    <span class="plus"></span>
+                    <span class="minus"></span>
+                </div>
+
+                <div class="description">
+                    <p>
+                        <b>[FINALE VERSION]</b><br>
+                        <b>-- Version 6.0.0 [11.03.2022] --</b><br>
+                        Code / Performance Optimierungen, neues Design, Fullscreen-Optimierungen, Bug fixes
+                        <br><br><b>-- Version 5.0.0 [07.11.2021] --</b><br>
+                        neue Funktionen, Code / Performance Optimierungen
+                        <br><br><b>-- Version 4.0.0 [21.05.2021] --</b><br>
+                        Support-Funktion
+                        <br><br><b>-- Version 3.0.0 [01.01.2021] --</b><br>
+                        Code / Performance Optimierungen
+                        <br><br><b>-- Version 2.0.0 [10.09.2020] --</b><br>
+                        Neues Design
+                        <br><br><b>-- Version 1.0.0 [10.08.2020] --</b><br>
+                        Release
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <div class="card" id="footer">
+        <div id="footercontent">
+            <div id="links">
+                <a href="imprint.html">Impressum</a>
+                <div id="youtube">
+                    <img src="graphics/youtube.png" alt="Logo YouTube" width="45px" height="45px">
+                    <a href="https://www.youtube.com/channel/UC44FC65CoOuQpyx6BkdPasA">CodeEagle</a>
+                </div>
+                <div id="instagram">
+                    <img src="graphics/instagram.png" alt="Logo Instagram" width="40px" height="40px">
+                    <a href="https://www.instagram.com/_codeeagle_/">_codeeagle_</a>
+                </div>
+            </div>
+            <div id="text">
+                <p>Copyright &copy; 2022 <span>Julian Lamm</span></p>
+                <p>Webseite zuletzt aktualisiert am: <span>07.09.2022</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="javascript/search.js"></script>
+    <script src="javascript/openCloseCard.js"></script>
+    <script src="javascript/backgroundAnimation.js"></script>
+    <script src="javascript/transitionsAction.js"></script>
+    <script src="javascript/toggleButtonAction.js"></script> <!-- open-menu-button animation when the button will be clicked -->
+</body>
+</html>

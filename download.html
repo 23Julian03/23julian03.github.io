@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<!-- @version 1-0-0 -->
+
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="author" content="Julian Lamm"/>
+    
+    <link href="css/mainStyle.css" rel="stylesheet">
+    <link href="css/transitions.css" rel="stylesheet">
+    <link href="css/downloadStyle.css" rel="stylesheet">
+    <link href="css/backgroundStyle.css" rel="stylesheet">
+    <link href="css/itemStyle.css" rel="stylesheet">
+    <link href="css/searchStyle.css" rel="stylesheet">
+
+    <link href="graphics/logo.png" rel="shortcut icon">
+    <title>CodeEagle - Downloads</title>
+</head>
+
+<body>
+    <noscript> <!-- JavaScript is disabled - error page will be loaded -->
+        <META HTTP-EQUIV="Refresh" CONTENT="0;URL=noJavaScript.html">
+    </noscript>
+
+    <!-- PAGE TRANSITION -->
+    <div class="transition transition-3 is-active"></div>
+
+    <!-- NAVIGATION BAR -->
+    <nav class="card">
+        <div id="navbarContent">
+            <!-- LOGO -->
+            <div id="logo">
+                <a id="companyName" href="index.html">CodeEagle</a>
+                <img src="graphics/logo.png" alt="Logo Adler" width="55px" height="45px">
+            </div>
+
+            <!-- BUTTON TO OPEN THE NAVIGATION BAR (for smaller devices) -->
+            <input type="checkbox" id="toggle_button">
+                <label for="toggle_button" class="toggle_button">
+                    <span></span> <!-- lines -->
+                    <span></span>
+                    <span></span>
+                </label>
+            
+            <!-- ELEMENTS OF THE NAVIGATION BAR -->
+            <ul>
+                <li><a href="comingSoon.html">Demnächst</a></li>
+                <li id="active"><a href="download.html">Downloads</a></li>
+                <li><a href="changelog.html">Änderungen</a></li>
+                <li><a href="credits.html">Referenz</a></li>
+                <li><a href="aboutMe.html">Über mich</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- CONTENT -->
+    <section id="content">
+        <!-- BACKGROUND ANIMATION -->
+        <div id="background"></div>
+
+        <div class="card">
+            <!-- SEARCH -->
+            <div class="search">
+                <div class="icon"></div>
+                <div class="input">
+                    <input type="text" onkeyup="doSearch()" autocomplete="off" maxlength="10" id="mySearch" placeholder="Suchen ...">
+                </div>
+                <span class="clear" onclick="document.getElementById('mySearch').value = ''; doSearch();"></span>
+            </div>
+
+            <!-- FILTER -->
+            <div class="card filter">
+                <button class="btn activated" onclick="filterSelection('')">Alles</button>
+                <button class="btn centerButton" onclick="filterSelection('software')">Software</button>
+                <button class="btn" onclick="filterSelection('games')">Games</button>
+            </div>
+
+            <!-- HINT -->
+            <div class="card" id="hint">
+                <p>
+                    <b>Hinweis</b><br>Die gesamte Software ist für das Betriebssystem Windows optimiert und nur unter Windows getestet worden.
+                    Daher kann es zu Funktionseinschränkungen / -störungen der Software bei anderen installierten Betriebssystem kommen.
+                    <br>Diese Unannehmlichkeiten bitte Ich zu entschuldigen. 
+                </p>
+            </div>
+
+            <!-- Downloads -->
+            <!-- TowerOfHanoi -->
+            <div class="item games" id="towerofhanoi">
+                <div class="title" onclick="openClose('towerofhanoi')">
+                    <div class="label"><p>Tower Of Hanoi</p>
+                    <span class="new"><img src="graphics/new.png" alt="new"></span></div>
+                    <span class="plus"></span>
+                    <span class="minus"></span>
+                </div>
+
+                <div class="description">
+                    <p><b>Version: 1.0.0</b></p>
+
+                    <div class="dbtn" id="15" onclick="animation(15)">
+                        <a href="https://onedrive.live.com/download?cid=717E1937F60BAF6D&resid=717E1937F60BAF6D%21205091&authkey=APhnSGmvBRu1lXU">
+                            <div class="completed">
+                                <img src="graphics/finished.png" alt="finished" width="30px">
+                                <span>Fertig</span>
+                            </div>
+                            <div class="download">
+                                <img src="graphics/download.png" alt="download" width="30px">
+                                <span>Download</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!--  ShutdownManager -->
+            <div class="item software" id="shutdownmanager">
+                <div class="title" onclick="openClose('shutdownmanager')">
+                    <div class="label"><p>Shutdown Manager</p></div>
+                    <span class="plus"></span>
+                    <span class="minus"></span>
+                </div>
+
+                <div class="description">
+                    <p><b>Version: 3.0.0</b></p>
+
+                    <div class="dbtn" id="14" onclick="animation(14)">
+                        <a href="https://onedrive.live.com/download?cid=717E1937F60BAF6D&resid=717E1937F60BAF6D%21205092&authkey=AOGZWJVD8ybXs5c">
+                            <div class="completed">
+                                <img src="graphics/finished.png" alt="finished" width="30px">
+                                <span>Fertig</span>
+                            </div>
+                            <div class="download">
+                                <img src="graphics/download.png" alt="download" width="30px">
+                                <span>Download</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- OneSound-MP -->
+            <div class="item software" id="onesound-mp">
+                <div class="title" onclick="openClose('onesound-mp')">
+                    <div class="label"><p>OneSound-MP</p></div>
+                    <span class="plus"></span>
+                    <span class="minus"></span>
+                </div>
+
+                <div class="description">
+                    <p><b>Version: 3.2.0</b></p>
+
+                    <div class="dbtn" id="13" onclick="animation(13)">
+                        <a href="https://onedrive.live.com/download?cid=717E1937F60BAF6D&resid=717E1937F60BAF6D%21205095&authkey=AF-FEjoz8-QxsM4">
+                            <div class="completed">
+                                <img src="graphics/finished.png" alt="finished" width="30px">
+                                <span>Fertig</span>
+                            </div>
+                            <div class="download">
+                                <img src="graphics/download.png" alt="download" width="30px">
+                                <span>Download</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FileManager -->
+            <div class="item software" id="filemanager">
+                <div class="title" onclick="openClose('filemanager')">
+                    <div class="label"><p>File Manager</p></div>
+                    <span class="plus"></span>
+                    <span class="minus"></span>
+                </div>
+
+                <div class="description">
+                    <p><b>Version: 2.1.0</b></p>
+
+                    <div class="dbtn" id="12" onclick="animation(12)">
+                        <a href="https://onedrive.live.com/download?cid=717E1937F60BAF6D&resid=717E1937F60BAF6D%21205096&authkey=AGVjLhCDEaF1bqc">
+                            <div class="completed">
+                                <img src="graphics/finished.png" alt="finished" width="30px">
+                                <span>Fertig</span>
+                            </div>
+                            <div class="download">
+                                <img src="graphics/download.png" alt="download" width="30px">
+                                <span>Download</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VacuumCleanerSimulator -->
+            <div class="item games" id="vacuumcleanersimulator">
+                <div class="title" onclick="openClose('vacuumcleanersimulator')">
+                    <div class="label"><p>Vacuum Cleaner Simulator</p></div>
+                    <span class="plus"></span>
+                    <span class="minus"></span>
+                </div>
+
+                <div class="description">
+                    <p><b>Version: 2.0.0</b></p>
+
+                    <div class="dbtn" id="11" onclick="animation(11)">
+                        <a href="https://onedrive.live.com/download?cid=717E1937F60BAF6D&resid=717E1937F60BAF6D%21205102&authkey=ADqB6ZR5yi1SDhY">
+                            <div class="completed">
+                                <img src="graphics/finished.png" alt="finished" width="30px">
+                                <span>Fertig</span>
+                            </div>
+                            <div class="download">
+                                <img src="graphics/download.png" alt="download" width="30px">
+                                <span>Download</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- WarAndPeace -->
+            <div class="item games" id="warandpeace">
+                <div class="title" onclick="openClose('warandpeace')">
+                    <div class="label"><p>War And Peace</p></div>
+                    <span class="plus"></span>
+                    <span class="minus"></span>
+                </div>
+
+                <div class="description">
+                    <p><b>Version: 2.0.0</b></p>
+
+                    <div class="dbtn" id="10" onclick="animation(10)">
+                        <a href="https://onedrive.live.com/download?cid=717E1937F60BAF6D&resid=717E1937F60BAF6D%21205099&authkey=AAsscF1tlbBr7m8">
+                            <div class="completed">
+                                <img src="graphics/finished.png" alt="finished" width="30px">
+                                <span>Fertig</span>
+                            </div>
+                            <div class="download">
+                                <img src="graphics/download.png" alt="download" width="30px">
+                                <span>Download</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pong -->
+            <div class="item games" id="pong">
+                <div class="title" onclick="openClose('pong')">
+                    <div class="label"><p>Pong</p></div>
+                    <span class="plus"></span>
+                    <span class="minus"></span>
+                </div>
+
+                <div class="description">
+                    <p><b>Version: 2.0.0</b></p>
+
+                    <div class="dbtn" id="9" onclick="animation(9)">
+                        <a href="https://onedrive.live.com/download?cid=717E1937F60BAF6D&resid=717E1937F60BAF6D%21205108&authkey=AIpfQAI4d5sAkqE">
+                            <div class="completed">
+                                <img src="graphics/finished.png" alt="finished" width="30px">
+                                <span>Fertig</span>
+                            </div>
+                            <div class="download">
+                                <img src="graphics/download.png" alt="download" width="30px">
+                                <span>Download</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- RockPaperScissors -->
+            <div class="item games" id="rockpaperscissors">
+                <div class="title" onclick="openClose('rockpaperscissors')">
+                    <div class="label"><p>Rock Paper Scissors</p></div>
+                    <span class="plus"></span>
+                    <span class="minus"></span>
+                </div>
+
+                <div class="description">
+                    <p><b>Version: 2.0.0</b></p>
+
+                    <div class="dbtn" id="8" onclick="animation(8)">
+                        <a href="https://onedrive.live.com/download?cid=717E1937F60BAF6D&resid=717E1937F60BAF6D%21205094&authkey=AGhCamor496UiQE">
+                            <div class="completed">
+                                <img src="graphics/finished.png" alt="finished" width="30px">
+                                <span>Fertig</span>
+                            </div>
+                            <div class="download">
+                                <img src="graphics/download.png" alt="download" width="30px">
+                                <span>Download</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Yahtzee -->
+            <div class="item games" id="yahtzee">
+                <div class="title" onclick="openClose('yahtzee')">
+                    <div class="label"><p>Yahtzee</p></div>
+                    <span class="plus"></span>
+                    <span class="minus"></span>
+                </div>
+
+                <div class="description">
+                    <p><b>Version: 3.0.0</b></p>
+
+                    <div class="dbtn" id="7" onclick="animation(7)">
+                        <a href="https://onedrive.live.com/download?cid=717E1937F60BAF6D&resid=717E1937F60BAF6D%21205097&authkey=AA5hgYqVnFs4T3w">
+                            <div class="completed">
+                                <img src="graphics/finished.png" alt="finished" width="30px">
+                                <span>Fertig</span>
+                            </div>
+                            <div class="download">
+                                <img src="graphics/download.png" alt="download" width="30px">
+                                <span>Download</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DestroyTheNumbers -->
+            <div class="item games" id="destroythenumbers">
+                <div class="title" onclick="openClose('destroythenumbers')">
+                    <div class="label"><p>Destroy The Numbers</p></div>
+                    <span class="plus"></span>
+                    <span class="minus"></span>
+                </div>
+
+                <div class="description">
+                    <p><b>Version: 2.0.0</b></p>
+
+                    <div class="dbtn" id="6" onclick="animation(6)">
+                        <a href="https://onedrive.live.com/download?cid=717E1937F60BAF6D&resid=717E1937F60BAF6D%21205107&authkey=AO_gw_esyb8R67o">
+                            <div class="completed">
+                                <img src="graphics/finished.png" alt="finished" width="30px">
+                                <span>Fertig</span>
+                            </div>
+                            <div class="download">
+                                <img src="graphics/download.png" alt="download" width="30px">
+                                <span>Download</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TrainYourBrain -->
+            <div class="item games" id="trainyourbrain">
+                <div class="title" onclick="openClose('trainyourbrain')">
+                    <div class="label"><p>Train Your Brain</p></div>
+                    <span class="plus"></span>
+                    <span class="minus"></span>
+                </div>
+
+                <div class="description">
+                    <p><b>Version: 2.1.0</b></p>
+
+                    <div class="dbtn" id="5" onclick="animation(5)">
+                        <a href="https://onedrive.live.com/download?cid=717E1937F60BAF6D&resid=717E1937F60BAF6D%21205106&authkey=ABnYETywHccYuHU">
+                            <div class="completed">
+                                <img src="graphics/finished.png" alt="finished" width="30px">
+                                <span>Fertig</span>
+                            </div>
+                            <div class="download">
+                                <img src="graphics/download.png" alt="download" width="30px">
+                                <span>Download</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TicTacToe -->
+            <div class="item games" id="tic-tac-toe">
+                <div class="title" onclick="openClose('tic-tac-toe')">
+                    <div class="label"><p>Tic-Tac-Toe</p></div>
+                    <span class="plus"></span>
+                    <span class="minus"></span>
+                </div>
+
+                <div class="description">
+                    <p><b>Version: 3.0.0</b></p>
+
+                    <div class="dbtn" id="4" onclick="animation(4)">
+                        <a href="https://onedrive.live.com/download?cid=717E1937F60BAF6D&resid=717E1937F60BAF6D%21205093&authkey=AOoP2hCyIlc4nkE">
+                            <div class="completed">
+                                <img src="graphics/finished.png" alt="finished" width="30px">
+                                <span>Fertig</span>
+                            </div>
+                            <div class="download">
+                                <img src="graphics/download.png" alt="download" width="30px">
+                                <span>Download</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GameOfLife -->
+            <div class="item games" id="gameOflife">
+                <div class="title" onclick="openClose('gameOflife')">
+                    <div class="label"><p>Game Of Life</p></div>
+                    <span class="plus"></span>
+                    <span class="minus"></span>
+                </div>
+
+                <div class="description">
+                    <p><b>Version: 5.0.0</b></p>
+
+                    <div class="dbtn" id="3" onclick="animation(3)">
+                        <a href="https://onedrive.live.com/download?cid=717E1937F60BAF6D&resid=717E1937F60BAF6D%21205109&authkey=ALgRkkgCZEnCZ84">
+                            <div class="completed">
+                                <img src="graphics/finished.png" alt="finished" width="30px">
+                                <span>Fertig</span>
+                            </div>
+                            <div class="download">
+                                <img src="graphics/download.png" alt="download" width="30px">
+                                <span>Download</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Clock -->
+            <div class="item software" id="clock">
+                <div class="title" onclick="openClose('clock')">
+                    <div class="label"><p>Clock</p></div>
+                    <span class="plus"></span>
+                    <span class="minus"></span>
+                </div>
+
+                <div class="description">
+                    <p><b>Version: 4.0.0</b></p>
+
+                    <div class="dbtn" id="2" onclick="animation(2)">
+                        <a href="https://onedrive.live.com/download?cid=717E1937F60BAF6D&resid=717E1937F60BAF6D%21205105&authkey=AKT6xk8Rwn7Y_go">
+                            <div class="completed">
+                                <img src="graphics/finished.png" alt="finished" width="30px">
+                                <span>Fertig</span>
+                            </div>
+                            <div class="download">
+                                <img src="graphics/download.png" alt="download" width="30px">
+                                <span>Download</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Counter -->
+            <div class="item software" id="counter">
+                <div class="title" onclick="openClose('counter')">
+                    <div class="label"><p>Counter</p></div>
+                    <span class="plus"></span>
+                    <span class="minus"></span>
+                </div>
+
+                <div class="description">
+                    <p><b>Version: 6.0.0</b></p>
+
+                    <div class="dbtn" id="1" onclick="animation(1)">
+                        <a href="https://onedrive.live.com/download?cid=717E1937F60BAF6D&resid=717E1937F60BAF6D%21205098&authkey=AJ20cMrE-k_zx04" onclick="openPopup();">
+                            <div class="completed">
+                                <img src="graphics/finished.png" alt="finished" width="30px">
+                                <span>Fertig</span>
+                            </div>
+                            <div class="download">
+                                <img src="graphics/download.png" alt="download" width="30px">
+                                <span>Download</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="popup-container">
+            <h1>Vielen Dank für das Herunterladen!</h1>
+            <h2>Viel Spaß mit der Software!</h2>
+            <img src="graphics/finished.png" alt="thumbs up" width="100px">
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <div class="card" id="footer">
+        <div id="footercontent">
+            <div id="links">
+                <a href="imprint.html">Impressum</a>
+                <div id="youtube">
+                    <img src="graphics/youtube.png" alt="Logo YouTube" width="45px" height="45px">
+                    <a href="https://www.youtube.com/channel/UC44FC65CoOuQpyx6BkdPasA">CodeEagle</a>
+                </div>
+                <div id="instagram">
+                    <img src="graphics/instagram.png" alt="Logo Instagram" width="40px" height="40px">
+                    <a href="https://www.instagram.com/_codeeagle_/">_codeeagle_</a>
+                </div>
+            </div>
+            <div id="text">
+                <p>Copyright &copy; 2022 <span>Julian Lamm</span></p>
+                <p>Webseite zuletzt aktualisiert am: <span>07.09.2022</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="javascript/downloadAction.js"></script>
+    <script src="javascript/search.js"></script>
+    <script src="javascript/openCloseCard.js"></script>
+    <script src="javascript/backgroundAnimation.js"></script>
+    <script src="javascript/transitionsAction.js"></script>
+    <script src="javascript/toggleButtonAction.js"></script> <!-- open-menu-button animation when the button will be clicked -->
+</body>
+</html>

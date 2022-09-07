@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<!-- @version 1-0-0 -->
+
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="author" content="Julian Lamm"/>
+    
+    <link href="css/mainStyle.css" rel="stylesheet">
+    <link href="css/transitions.css" rel="stylesheet">
+    <link href="css/aboutMeStyle.css" rel="stylesheet">
+        
+    <link href="graphics/logo.png" rel="shortcut icon">
+    <title>CodeEagle - Über Mich</title>
+</head>
+
+<body>
+    <noscript> <!-- JavaScript is disabled - error page will be loaded -->
+        <META HTTP-EQUIV="Refresh" CONTENT="0;URL=noJavaScript.html">
+    </noscript>
+
+    <!-- PAGE TRANSITION -->
+    <div class="transition transition-1 is-active"></div>
+
+    <!-- NAVIGATION BAR -->
+    <nav class="card">
+        <div id="navbarContent">
+            <!-- LOGO -->
+            <div id="logo">
+                <a id="companyName" href="index.html">CodeEagle</a>
+                <img src="graphics/logo.png" alt="Logo Adler" width="55px" height="45px">
+            </div>
+
+            <!-- BUTTON TO OPEN THE NAVIGATION BAR (for smaller devices) -->
+            <input type="checkbox" id="toggle_button">
+                <label for="toggle_button" class="toggle_button">
+                    <span></span> <!-- lines -->
+                    <span></span>
+                    <span></span>
+                </label>
+            
+            <!-- ELEMENTS OF THE NAVIGATION BAR -->
+            <ul>
+                <li><a href="comingSoon.html">Demnächst</a></li>
+                <li><a href="download.html">Downloads</a></li>
+                <li><a href="changelog.html">Änderungen</a></li>
+                <li><a href="credits.html">Referenz</a></li>
+                <li id="active"><a href="aboutMe.html">Über mich</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- CONTENT -->
+    <section id="content">
+        <!-- BACKGROUND PARTICLES -->
+        <div class="background">
+            <div class="glowing">
+                <span style="--i:1;"></span>
+                <span style="--i:2;"></span>
+                <span style="--i:3;"></span>
+            </div>
+    
+            <div class="glowing">
+                <span style="--i:1;"></span>
+                <span style="--i:2;"></span>
+                <span style="--i:3;"></span>
+            </div>
+    
+            <div class="glowing">
+                <span style="--i:1;"></span>
+                <span style="--i:2;"></span>
+                <span style="--i:3;"></span>
+            </div>
+    
+            <div class="glowing">
+                <span style="--i:1;"></span>
+                <span style="--i:2;"></span>
+                <span style="--i:3;"></span>
+            </div>
+        </div>
+
+        <!-- INFORMATION CARD -->
+        <div id="information" class="card">
+            <h1>Über Mich</h1> <!-- title -->
+            
+            <p>
+                Ich heiße Julian Lamm, bin 20 Jahre alt und bin angehender Softwareentwickler. Zurzeit absolviere ich ein
+                duales Studium in Wirtschaftsinformatik und in meiner Freizeit arbeite ich an eigenen Projekten, wie unter anderem
+                diese Webseite, als auch die gesamte Software, die auf dieser Webseite jedem frei zur Verfügung steht.
+                <br><br>
+                Ich programmiere seit ungefähr drei Jahren Java, das ich mir größtenteils selbst angeeignet habe und seit
+                ungefähr einem Jahr HTML, CSS und JavaScript.
+                <br><br>
+                Ich versuche meine Software stetig auf dem neuesten Stand zu halten und zu verbessern, sowie regelmäßig
+                neue Software zu entwickeln. Falls es zu Verzögerungen oder längere Wartezeiten kommen sollte, bitte ich um Verständnis.
+                Es ist ein Hobby und manchmal fehlt einfach die Zeit.
+                <br><br>
+                <span id="cv"><a href="login.html" target="Login">Login</a>, um meinen Lebenslauf zu öffnen.</span>
+                <br><br>
+                Falls Sie Fragen, (Verbesserungs-)Vorschläge oder Kritik äußern möchten, schreiben Sie mir gerne eine E-Mail an
+                <span id="email">help.julian.lamm@gmail.com</span> oder nutzen Sie das <a href="contact.html" target="Kontakt">Ausfüllformular</a>.
+                <br><br>
+                Ich bedanke mich an alle, die meine Programme nutzen und hoffe, das sie Ihnen gefallen.
+            </p>
+        </div>
+
+        <!-- HARD SKILLS CARD -->
+        <div id="hardSkills" class="card">
+            <h1>Hard Skills</h1> <!-- title -->
+
+            <div id="above">
+                <!-- skill circle 1 -->
+                <div class="block">
+                    <div class="box">
+                        <p class="number">
+                            <span class="num">60</span>
+                            <span class="sub">%</span>
+                        </p>
+                        <p class="title">HTML</p>
+                    </div>
+                    <span class="dots"></span>
+                    <svg class="svg">
+                        <defs>
+                            <linearGradient id="gradientStyle">
+                                <stop offset="0%" stop-color="rgba(219, 13, 109, 0.7)"/>
+                                <stop offset="100%" stop-color="rgba(252, 103, 103, 0.7)"/>
+                            </linearGradient>
+                        </defs>
+                        <circle class="circle" cx="90" cy="90" r="80"/>
+                    </svg>
+                </div>
+
+                <!-- skill circle 2 -->
+                <div class="block">
+                    <div class="box">
+                        <p class="number">
+                            <span class="num">50</span>
+                            <span class="sub">%</span>
+                        </p>
+                        <p class="title">CSS</p>
+                    </div>
+                    <span class="dots"></span>
+                    <svg class="svg">
+                        <circle class="circle" cx="90" cy="90" r="80"/>
+                    </svg>
+                </div>
+            </div>
+
+            <div id="below">
+                <!-- skill circle 3 -->
+                <div class="block">
+                    <div class="box">
+                        <p class="number">
+                            <span class="num">70</span>
+                            <span class="sub">%</span>
+                        </p>
+                        <p class="title">JavaScript</p>
+                    </div>
+                    <span class="dots"></span>
+                    <svg class="svg">
+                        <circle class="circle" cx="90" cy="90" r="80"/>
+                    </svg>
+                </div>
+
+
+                <!-- skill circle 4 -->
+                <div class="block">
+                    <div class="box">
+                        <p class="number">
+                            <span class="num">90</span>
+                            <span class="sub">%</span>
+                        </p>
+                        <p class="title">Java</p>
+                    </div>
+                    <span class="dots"></span>
+                    <svg class="svg">
+                        <circle class="circle" cx="90" cy="90" r="80"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <!-- SOFT SKILLS CARD -->
+        <div id="softSkills" class="card">
+            <h1>Soft Skills</h1> <!-- title -->
+
+            <!-- skill bar 1 -->
+            <div class="skills">
+                <div class="details">
+                    <span>Kommunikation</span>
+                    <span class="num">70%</span>
+                </div>
+
+                <div class="bar">
+                    <div id="bar1"></div>
+                </div>
+            </div>
+
+            <!-- skill bar 2 -->
+            <div class="skills">
+                <div class="details">
+                    <span>Teamfähigkeit</span>
+                    <span class="num">90%</span>
+                </div>
+
+                <div class="bar">
+                    <div id="bar2"></div>
+                </div>
+            </div>
+
+            <!-- skill bar 3 -->
+            <div class="skills">
+                <div class="details">
+                    <span>Projektmanagement</span>
+                    <span class="num">90%</span>
+                </div>
+
+                <div class="bar">
+                    <div id="bar3"></div>
+                </div>
+            </div>
+
+            <!-- skill bar 4 -->
+            <div class="skills">
+                <div class="details">
+                    <span>Kreativität</span>
+                    <span class="num">70%</span>
+                </div>
+
+                <div class="bar">
+                    <div id="bar4"></div>
+                </div>
+            </div>
+
+            <!-- skill bar 5 -->
+            <div class="skills">
+                <div class="details">
+                    <span>Analytisches Denken</span>
+                    <span class="num">80%</span>
+                </div>
+
+                <div class="bar">
+                    <div id="bar5"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="javascript/aboutMeAnimation.js"></script>
+    <script src="javascript/transitionsAction.js"></script>
+    <script src="javascript/toggleButtonAction.js"></script> <!-- open-menu-button animation when the button will be clicked -->
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- @version 1-0-0 -->
+
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="3"> <!-- refresh website every 3 seconds -->
+
+    <meta name="author" content="Julian Lamm"/>
+    
+    <link href="css/mainStyle.css" rel="stylesheet">
+    <link href="css/noJavaScriptStyle.css" rel="stylesheet">
+
+    <link href="graphics/logo.png" rel="shortcut icon">
+    <title>CodeEagle - JavaScript Fehler</title>
+</head>
+
+<body>
+    <!-- CONTENT -->
+    <section id="content">
+        <div class="card">
+            <!-- user information -->
+            <h1>JavaScript ist in Ihrem Browser deaktiviert!</h1> <!-- German -->
+            <p>
+                Bitte aktivieren Sie JavaScript,
+                damit die Webseite richtig und vollständig dargestellt werden kann.
+            </p>
+            <br><br>
+            <h1>JavaScript is disabled in your browser!</h1> <!-- English -->
+            <p>
+                Please enable JavaScript so that the 
+                website can be displayed correctly and completely.
+            </p>
+            <br>
+            <img src="graphics/error.png" alt="Sad Smiley" width=280px> <!-- sad smiley -->
+        </div>
+    </section>
+
+    <script> //JavaScript is enabled
+        window.location.href = "index.html"; //load index.html again
+    </script>
+</body>
+</html>
