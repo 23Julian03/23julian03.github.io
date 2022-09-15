@@ -11,6 +11,9 @@ let timeout;
 
 //available software
 const software = [
+    "Evil One",
+    "Random Generator",
+    "Simon Click",
     "Tower Of Hanoi",
     "Shutdown Manager",
     "OneSound-MP",
