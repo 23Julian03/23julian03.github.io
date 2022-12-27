@@ -1,4 +1,4 @@
-const countDate = new Date('Jan 01, 2023 20:00:00').getTime(); //target time
+const countDate = new Date('Feb 16, 2023 20:00:00').getTime(); //target time
 
 function count() { //update the timer
     let now = new Date().getTime();
