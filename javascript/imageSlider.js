@@ -11,6 +11,7 @@ let timeout;
 
 //available software
 const software = [
+    "StaffCol",
     "Connect Four",
     "Job Scheduler",
     "Evil One",
